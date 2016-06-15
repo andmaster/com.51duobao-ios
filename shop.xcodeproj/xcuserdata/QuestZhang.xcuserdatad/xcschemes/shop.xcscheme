@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84F0290B1D04752300F1CCD0"
-               BuildableName = "shop.app"
+               BuildableName = "&#x4e01;&#x4e01;&#x4e91;&#x8d2d;.app"
                BlueprintName = "shop"
                ReferencedContainer = "container:shop.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84F029241D04752300F1CCD0"
-               BuildableName = "shopTests.xctest"
+               BuildableName = "shop.xctest"
                BlueprintName = "shopTests"
                ReferencedContainer = "container:shop.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "84F0292F1D04752300F1CCD0"
-               BuildableName = "shopUITests.xctest"
+               BuildableName = "shop.xctest"
                BlueprintName = "shopUITests"
                ReferencedContainer = "container:shop.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F0290B1D04752300F1CCD0"
-            BuildableName = "shop.app"
+            BuildableName = "&#x4e01;&#x4e01;&#x4e91;&#x8d2d;.app"
             BlueprintName = "shop"
             ReferencedContainer = "container:shop.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F0290B1D04752300F1CCD0"
-            BuildableName = "shop.app"
+            BuildableName = "&#x4e01;&#x4e01;&#x4e91;&#x8d2d;.app"
             BlueprintName = "shop"
             ReferencedContainer = "container:shop.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "84F0290B1D04752300F1CCD0"
-            BuildableName = "shop.app"
+            BuildableName = "&#x4e01;&#x4e01;&#x4e91;&#x8d2d;.app"
             BlueprintName = "shop"
             ReferencedContainer = "container:shop.xcodeproj">
          </BuildableReference>
