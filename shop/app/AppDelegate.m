@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import "BaseAPI.h"
 #import "ViewController.h"
+#import "Constants.h"
+
+#import "WXApi.h"
+#import "WXApiManager.h"
 
 @interface AppDelegate ()
 
@@ -19,10 +23,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //向微信注册
+    [WXApi registerApp:APP_ID_WX withDescription:@"丁丁云购 1.0"];
+    
     ViewController* rootViewController = [[ViewController alloc] init];
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
     self.window.rootViewController = navController;
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -148,8 +148,8 @@
 -(NSMutableArray *)tabUrls{
     if (_tabUrls == nil) {
         _tabUrls = [NSMutableArray array];
-        [_tabUrls addObject:[HOST stringByAppendingString:@"/"]];
         [_tabUrls addObject:HOST];
+        [_tabUrls addObject:[HOST stringByAppendingString:@"/"]];
         [_tabUrls addObject:[HOST stringByAppendingString:@"/?/mobile/mobile/"]];
         [_tabUrls addObject:[HOST stringByAppendingString:@"/?/mobile/mobile"]];
         [_tabUrls addObject:[HOST stringByAppendingString:@"/?/mobile/mobile/glist/"]];
