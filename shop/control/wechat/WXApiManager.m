@@ -10,6 +10,8 @@
 
 @implementation WXApiManager
 
+@synthesize delegate;
+
 #pragma mark - LifeCycle
 +(instancetype)sharedManager {
     static dispatch_once_t onceToken;
@@ -18,6 +20,20 @@
         instance = [[WXApiManager alloc] init];
     });
     return instance;
+}
+
+-(void)onReq:(BaseReq *)req{
+
+}
+
+
+-(void)onResp:(BaseResp *)resp{
+    if ([resp isKindOfClass:[PayResp class]]) {
+        if (delegate != nil && [delegate respondsToSelector:@selector(managerDidRecvPayResponse:)]) {
+            PayResp* respones = (PayResp*)resp;
+            [delegate managerDidRecvPayResponse:respones];
+        }
+    }
 }
 
 @end

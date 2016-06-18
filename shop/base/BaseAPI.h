@@ -17,4 +17,15 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
 #define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
 
+
+#ifdef DEBUG
+
+#define Log(fomat,...) NSLog( @"[%@:(%d)] %@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(fomat), ##__VA_ARGS__] )
+
+#else
+
+#define Log(fomat,...)
+
+#endif
+
 #endif /* BaseAPI_h */

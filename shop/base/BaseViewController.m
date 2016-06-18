@@ -30,6 +30,9 @@
     
     return json;
 }
-
+/************************网络请求 start*************/
+-(void)failedError:(NSString *)error type:(HttpTagType)type{}
+-(void)successObject:(id)responseObject response:(NSURLResponse *)response type:(HttpTagType)type{}
+/************************网络请求 end*************/
 
 @end

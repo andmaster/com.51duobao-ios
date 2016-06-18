@@ -11,10 +11,11 @@
 #import "Constants.h"
 #import "UINavigationController+Custom.h"
 #import "NSString+MD5.h"
+#import "HttpRequest.h"
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<HttpRequestDeletage>
 
 /*json解析*/
-- (nullable id)parserWithJsonString:(NSString *)jsonString;
+- (nullable id)parserWithJsonString:(NSString * _Nonnull)jsonString;
 
 @end
