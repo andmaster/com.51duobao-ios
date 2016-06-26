@@ -11,7 +11,8 @@
 
 typedef enum{
 
-    SAVEORDER
+    PLACETHEORDER,//统一下单
+    SAVEORDER//保存订单
     
 }HttpTagType;
 

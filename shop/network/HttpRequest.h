@@ -18,8 +18,16 @@
 
 @interface HttpRequest : NSObject
 
-+(void)httpGet:(id)parameters deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type;/*GET请求*/
+/*GET请求*/
++(void)httpGet:(id)parameters URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type;
 
-+(void)httpPost:(id)parameters deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type;/*POST请求*/
+/*POST请求*/
++(void)httpPost:(id)parameters URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type;
+
+/*POST请求 entity*/
++(void)httpPostEntity:(NSString*)entity URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type;
+
+/*POST请求*/
++(void)httpPostBody:(NSString*)body URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type;
 
 @end

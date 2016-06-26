@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GDataXML-HTML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NJKWebViewProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,7 +37,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>90B780549DF8C037F927BF02EB60CC82</key>
+		<key>661266EBD6EA604C675CD4D5D02CF971</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,7 +47,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>95AA066E5EDEF62077F4B05665A3B4EF</key>
+		<key>99967C82A34D60941C623307F7D39096</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB85AFC4EE3047E034391940A1E82E47</key>
+		<key>DA28FA2648BDBCECC5988E43DFA9D8B8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCAB7B1E38DFC6F45612234E3218EC19</key>
 		<dict>
 			<key>primary</key>
 			<true/>

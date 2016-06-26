@@ -11,6 +11,7 @@
 #import "NJKWebViewProgress.h"
 #import "WebViewJavascriptBridge.h"
 #import "UIWebView+BlackColor.h"
+#import "BridgeController.h"
 
 @interface ViewController ()<NJKWebViewProgressDelegate>
 
@@ -18,11 +19,12 @@
 @property(nonatomic, assign) CGFloat height;
 @property(nonatomic, assign) CGRect mainFrame;
 @property(nonatomic, assign) CGRect statusFrame;
-@property(nonatomic, strong) UIWebView* webView;
-@property (nonatomic, strong) NJKWebViewProgressView *webViewProgressView;
-@property (nonatomic, strong) NJKWebViewProgress *webViewProgress;
+@property(nonatomic, strong) NJKWebViewProgressView *webViewProgressView;
+@property(nonatomic, strong) NJKWebViewProgress *progressProxy;
 @property(nonatomic, strong) WebViewJavascriptBridge* bridge;
 @property(nonatomic, strong) NSMutableArray* tabUrls;
+@property(nonatomic, strong) NSMutableArray* cachaUrl;
+@property(nonatomic, assign) BOOL loadingSuccess;
 
 @end
 
@@ -35,29 +37,27 @@
     [self.view addSubview:self.webView];
     [self.navigationController.backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.navigationBar addSubview:self.webViewProgressView];
-    [self webViewProgress];
+    [WXApiManager sharedManager].delegate = [BridgeController share];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     NSURLRequest* URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:HOST]];
     [self.webView loadRequest:URLRequest];
-    [self.bridge setWebViewDelegate:self];
+    //[self registerProgressProxy];
+    [[BridgeController share] registerHandler:self.bridge viewController:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    /*微信支付*/
-    [self.bridge registerHandler:@"PayWX" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"ObjC Echo called with: %@", data);
-        //responseCallback(data);//回调数据的block方法
-    }];
     
-    /*支付宝支付*/
-    [self.bridge registerHandler:@"PayAlipay" handler:^(id data, WVJBResponseCallback responseCallback) {
-        NSLog(@"ObjC Echo called with: %@", data);
-        //responseCallback(data);//回调数据的block方法
-    }];
+}
+
+/* 加载URL精度条 */
+- (void)registerProgressProxy{
+    self.webView.delegate = self.progressProxy;
+    self.progressProxy.webViewProxyDelegate = self;
+    self.progressProxy.progressDelegate = self;
 }
 
 -(void) goBack:(UIButton*)button{
@@ -76,7 +76,7 @@
 
 #pragma mark -- UIWebViewDeletage --
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-    return YES;
+    return !([request.URL.absoluteString compare:self.cachaUrl[0]] == NSOrderedSame);
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
@@ -84,19 +84,25 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
-   self.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    [self.cachaUrl replaceObjectAtIndex:0 withObject:webView.request.URL.absoluteString];
+    [self loadingTitle];
     NSString* URLString = webView.request.URL.absoluteString;
     self.navigationController.backButton.hidden = [self.tabUrls containsObject:URLString];
-    NSLog(@"%@",URLString);
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
+    [self loadingTitle];
     if([error code] == NSURLErrorCancelled){ return; }
-    NSLog(@"%@",error.description);
+}
+
+/* 加载网页上的title */
+- (void)loadingTitle{
+    self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 #pragma mark -- NJKWebViewProgressDelegate --
 - (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress{
+    [self loadingTitle];
     [self.webViewProgressView setProgress:progress animated:YES];
 }
 
@@ -110,7 +116,6 @@
         //_webview.dataDetectorTypes=UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
         [_webView.scrollView setShowsVerticalScrollIndicator:NO];//隐藏垂直滚动条
         _webView.scalesPageToFit = YES;
-        _webView.delegate = self;
         [_webView didNotLeftOrRightScrollForWebView];
         [_webView clearBackColorForWebView];
     }
@@ -120,6 +125,7 @@
 -(WebViewJavascriptBridge *)bridge{
     if (_bridge == nil) {
         _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+        [_bridge setWebViewDelegate:self];
     }
     return _bridge;
 }
@@ -135,14 +141,11 @@
     return _webViewProgressView;
 }
 
--(NJKWebViewProgress *)webViewProgress{
-    if (_webViewProgress == nil) {
-        _webViewProgress = [[NJKWebViewProgress alloc] init];
-        self.webView.delegate = _webViewProgress;
-        _webViewProgress.webViewProxyDelegate = self;
-        _webViewProgress.progressDelegate = self;
+-(NJKWebViewProgress *)progressProxy{
+    if (_progressProxy == nil) {
+        _progressProxy = [[NJKWebViewProgress alloc] init];
     }
-    return _webViewProgress;
+    return _progressProxy;
 }
 
 -(NSMutableArray *)tabUrls{
@@ -165,22 +168,17 @@
         
 //        tabUrls.add("data:text/html,chromewebdata");
 //        tabUrls.add("file:///android_asset/html/error.html");
-//        tabUrls.add(Constants.HOST+"/");
-//        tabUrls.add(Constants.HOST);
-//        tabUrls.add(Constants.HOST+"/?/mobile/mobile/");//
-//        tabUrls.add(Constants.HOST+"/?/mobile/mobile");
-//        tabUrls.add(Constants.HOST+"/?/mobile/mobile/glist/");//
-//        tabUrls.add(Constants.HOST+"/?/mobile/mobile/glist");
-//        tabUrls.add(Constants.HOST+"/?/mobile/mobile/lottery/");//
-//        tabUrls.add(Constants.HOST+"/?/mobile/mobile/lottery");
-//        tabUrls.add(Constants.HOST+"/?/mobile/cart/cartlist/");//
-//        tabUrls.add(Constants.HOST+"/?/mobile/cart/cartlist");
-//        tabUrls.add(Constants.HOST+"/?/mobile/user/login/");//
-//        tabUrls.add(Constants.HOST+"/?/mobile/user/login");
-//        tabUrls.add(Constants.HOST+"/?/mobile/home/");
-//        tabUrls.add(Constants.HOST+"/?/mobile/home");
+//
     }
     return _tabUrls;
+}
+
+- (NSMutableArray *)cachaUrl{
+    if (_cachaUrl == nil) {
+        _cachaUrl = [NSMutableArray array];
+        [_cachaUrl addObject:HOST];
+    }
+    return _cachaUrl;
 }
 
 -(CGFloat)width{
@@ -203,6 +201,11 @@
 
 -(CGRect)statusFrame{
     return [[UIApplication sharedApplication] statusBarFrame];
+}
+
+-(void)dealloc{
+    _tabUrls = nil;
+    _cachaUrl = nil;
 }
 
 @end

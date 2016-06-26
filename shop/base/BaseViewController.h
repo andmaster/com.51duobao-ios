@@ -12,10 +12,16 @@
 #import "UINavigationController+Custom.h"
 #import "NSString+MD5.h"
 #import "HttpRequest.h"
+#import "WXApiManager.h"
+#import "WXApiRequestHandler.h"
+#import "GDataXMLNode.h"
 
 @interface BaseViewController : UIViewController<HttpRequestDeletage>
 
 /*json解析*/
 - (nullable id)parserWithJsonString:(NSString * _Nonnull)jsonString;
+
+/* 显示用户信息提示框 */
+- (void)showToast:(NSString * _Nonnull) msg;
 
 @end

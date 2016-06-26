@@ -6,6 +6,7 @@
 //  Copyright © 2016年 ishi. All rights reserved.
 //
 
+#import "WXApi.h"
 #import "WXApiResponseHandler.h"
 
 @implementation WXApiResponseHandler
