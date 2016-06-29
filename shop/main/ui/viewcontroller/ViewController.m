@@ -25,6 +25,7 @@
 @property(nonatomic, strong) NSMutableArray* tabUrls;
 @property(nonatomic, strong) NSMutableArray* cachaUrl;
 @property(nonatomic, assign) BOOL loadingSuccess;
+@property(nonatomic, strong) UIButton* payButton;
 
 @end
 
@@ -38,6 +39,8 @@
     [self.navigationController.backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.navigationBar addSubview:self.webViewProgressView];
     [WXApiManager sharedManager].delegate = [BridgeController share];
+    UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.payButton];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -72,6 +75,9 @@
 
 #pragma mark -- self`s method --
 
+-(void)pay:(UIButton*)button{
+    [[BridgeController share] executUnifiedOrder:@{@"money":@"123"}];
+}
 
 
 #pragma mark -- UIWebViewDeletage --
@@ -106,7 +112,18 @@
     [self.webViewProgressView setProgress:progress animated:YES];
 }
 
+
 #pragma mark -- getter --
+
+-(UIButton *)payButton{
+    if (_payButton == nil) {
+        _payButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _payButton.frame = CGRectMake(0, 0, 72, 48);
+        [_payButton setTitle:@"微信支付" forState:UIControlStateNormal];
+        [_payButton addTarget:self action:@selector(pay:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _payButton;
+}
 
 -(UIWebView *)webView{
     if (_webView == nil) {

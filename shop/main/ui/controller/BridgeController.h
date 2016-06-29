@@ -16,6 +16,8 @@
 
 +(instancetype)share;
 
+-(void)executUnifiedOrder:(id)data;
+
 /* 监听点击js */
 - (void)registerHandler:(WebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController;
 

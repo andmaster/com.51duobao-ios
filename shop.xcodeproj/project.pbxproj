@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403747B1D1684DC009D7D64 /* OrderUtil.m */; };
 		8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8403747D1D168E6A009D7D64 /* IPAddress.c */; };
-		848038FD1D1EDA44003E2458 /* libSign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 848038FC1D1EDA44003E2458 /* libSign.a */; };
 		8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */; };
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
 		8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */; };
@@ -28,6 +27,8 @@
 		84B0A37E1D12AAE300215200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A37D1D12AAE300215200 /* UIKit.framework */; };
 		84B0A3801D12AB3200215200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A37F1D12AB3200215200 /* Foundation.framework */; };
 		84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0A3891D12B59500215200 /* WXApiManager.m */; };
+		84BCAA101D2021B1003341AD /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BCAA0F1D2021B1003341AD /* UserDefault.m */; };
+		84C7B15D1D23FB470028B09D /* libSign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C7B15C1D23FB470028B09D /* libSign.a */; };
 		84D1D2D91D19108300F47C44 /* XMLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D2D81D19108300F47C44 /* XMLUtil.m */; };
 		84D1D2DC1D1910B700F47C44 /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D2DB1D1910B700F47C44 /* PayModel.m */; };
 		84D93AA41D15B92E00F282AB /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D93AA31D15B92E00F282AB /* libxml2.2.tbd */; };
@@ -68,12 +69,10 @@
 /* Begin PBXFileReference section */
 		094D0C1F03EB3F60DC9635A1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		56D39856BC9656AB63757910 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		840374791D1679C1009D7D64 /* Sign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
 		8403747A1D1684DC009D7D64 /* OrderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderUtil.h; sourceTree = "<group>"; };
 		8403747B1D1684DC009D7D64 /* OrderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderUtil.m; sourceTree = "<group>"; };
 		8403747D1D168E6A009D7D64 /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
 		8403747E1D168E6A009D7D64 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
-		848038FC1D1EDA44003E2458 /* libSign.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSign.a; sourceTree = "<group>"; };
 		8487C75B1D0D8BD5004B8F6C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8487C75E1D0D8BD5004B8F6C /* BaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
@@ -103,6 +102,10 @@
 		84B0A37F1D12AB3200215200 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84B0A3881D12B59500215200 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		84B0A3891D12B59500215200 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		84BCAA0E1D2021B1003341AD /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
+		84BCAA0F1D2021B1003341AD /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
+		84C7B15C1D23FB470028B09D /* libSign.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSign.a; sourceTree = "<group>"; };
+		84C7B15E1D23FB5E0028B09D /* Sign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
 		84D1D2D71D19108300F47C44 /* XMLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtil.h; sourceTree = "<group>"; };
 		84D1D2D81D19108300F47C44 /* XMLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLUtil.m; sourceTree = "<group>"; };
 		84D1D2DA1D1910B700F47C44 /* PayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayModel.h; sourceTree = "<group>"; };
@@ -152,7 +155,7 @@
 				84B0A37A1D12A80500215200 /* libc++.1.tbd in Frameworks */,
 				84B0A3781D12A7D400215200 /* libz.1.1.3.tbd in Frameworks */,
 				84B0A3761D12A7AE00215200 /* libsqlite3.0.tbd in Frameworks */,
-				848038FD1D1EDA44003E2458 /* libSign.a in Frameworks */,
+				84C7B15D1D23FB470028B09D /* libSign.a in Frameworks */,
 				84B0A3741D12A75600215200 /* SystemConfiguration.framework in Frameworks */,
 				84B0A3711D12A61F00215200 /* libWeChatSDK.a in Frameworks */,
 				B71D2260B05B8345045A98BE /* libPods.a in Frameworks */,
@@ -281,8 +284,8 @@
 		84B0A36A1D12A3CC00215200 /* Wechat */ = {
 			isa = PBXGroup;
 			children = (
-				840374791D1679C1009D7D64 /* Sign.h */,
-				848038FC1D1EDA44003E2458 /* libSign.a */,
+				84C7B15E1D23FB5E0028B09D /* Sign.h */,
+				84C7B15C1D23FB470028B09D /* libSign.a */,
 				84B0A36C1D12A61F00215200 /* libWeChatSDK.a */,
 				84B0A36E1D12A61F00215200 /* WechatAuthSDK.h */,
 				84B0A36F1D12A61F00215200 /* WXApi.h */,
@@ -369,6 +372,8 @@
 		84E3190E1D11B1CB0094F1FE /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				84BCAA0E1D2021B1003341AD /* UserDefault.h */,
+				84BCAA0F1D2021B1003341AD /* UserDefault.m */,
 				8403747A1D1684DC009D7D64 /* OrderUtil.h */,
 				8403747B1D1684DC009D7D64 /* OrderUtil.m */,
 				8403747D1D168E6A009D7D64 /* IPAddress.c */,
@@ -655,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BCAA101D2021B1003341AD /* UserDefault.m in Sources */,
 				8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */,
 				8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */,
 				84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */,

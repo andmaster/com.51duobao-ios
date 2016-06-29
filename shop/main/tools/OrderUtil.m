@@ -13,6 +13,7 @@
 #import <UIKit/UIKit.h>
 #import <ifaddrs.h>
 #import <arpa/inet.h>
+#import "UserDefault.h"
 
 @interface IPModel : NSObject
 
@@ -33,8 +34,13 @@
 
 /******是 随机字符串****/
 +(NSString*)nonceStr{
-    NSString* random = [NSString stringWithFormat:@"%u",arc4random()];
-    return [random MD5Hash];
+    NSString* nonceStr = [[UserDefault share] getNonceStr];
+    if (nonceStr == nil || nonceStr.length == 0) {
+         nonceStr = [[NSString stringWithFormat:@"%u",arc4random()] MD5Hash];
+        [[UserDefault share] saveNonceStr:nonceStr];
+        return nonceStr;
+    }
+    return nonceStr;
 }
 
 /******是 通知地址****/
@@ -156,10 +162,41 @@
 
 /** 获取系统当前的时间戳 */
 +(NSString*)timeStamp{
-    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
-    NSTimeInterval a=[dat timeIntervalSince1970]*1000;
-    NSString *timeString = [NSString stringWithFormat:@"%f", a];//转为字符型
-    return [timeString componentsSeparatedByString:@"."][0];
+    NSDate *now = [NSDate date];//现在时间,你可以输出来看下是什么格式
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+    
+    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+    [formatter setTimeZone:timeZone];
+    NSString *nowTimeString = [formatter stringFromDate:now];//将nsdate按formatter格式转成nsstring
+    NSDate* date = [formatter dateFromString:nowTimeString];
+    
+    
+//    NSDate* dat = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSTimeInterval a=[date timeIntervalSince1970];
+    NSString *timeString = [NSString stringWithFormat:@"%ld", (long)a];//转为字符型
+//    return [timeString componentsSeparatedByString:@"."][0];
+    return timeString;
+    
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    [formatter setDateStyle:NSDateFormatterMediumStyle];
+//    [formatter setTimeStyle:NSDateFormatterShortStyle];
+//    [formatter setDateFormat:@"YYYY-MM-dd HH:mm:ss"];
+//    
+//    NSTimeZone* timeZone = [NSTimeZone timeZoneWithName:@"Asia/Beijing"];
+//    [formatter setTimeZone:timeZone];
+//
+//    NSDate* date = [formatter dateFromString:[formatter stringFromDate:dat]];
+    
+//    NSDate *datenow = [NSDate date];//现在时间,你可以输出来看下是什么格式
+//    
+//    NSString *nowtimeStr = [formatter stringFromDate:datenow];//----------将nsdate按formatter格式转成nsstring
+//    //时间转时间戳的方法:
+//    NSString *timeSp = [NSString stringWithFormat:@"%ld", (long)[datenow timeIntervalSince1970]];
+//    NSLog(@"timeSp:%@",timeSp); //时间戳的值
+//    return timeSp;
 }
 
 @end

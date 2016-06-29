@@ -40,15 +40,15 @@
     
     if ([self.currentElement isEqualToString:@"return_code"]) {
         self.model.return_code = string;
-        [self.params setObject:string forKey:@"return_code"];
+        //[self.params setObject:string forKey:@"return_code"];
         
     }else if ([self.currentElement isEqualToString:@"return_msg"]){
         self.model.return_msg = string;
-        [self.params setObject:string forKey:@"return_msg"];
+        //[self.params setObject:string forKey:@"return_msg"];
         
     }else if ([self.currentElement isEqualToString:@"appid"]){
         self.model.appid = string;
-        [self.params setObject:string forKey:@"appid"];
+        //[self.params setObject:string forKey:@"appid"];
         
     }else if ([self.currentElement isEqualToString:@"mch_id"]){
         self.model.mch_id = string;
@@ -56,31 +56,31 @@
         
     }else if ([self.currentElement isEqualToString:@"device_info"]){
         self.model.device_info = string;
-        [self.params setObject:string forKey:@"device_info"];
+        //[self.params setObject:string forKey:@"device_info"];
         
     }else if ([self.currentElement isEqualToString:@"nonce_str"]){
         self.model.nonce_str = string;
-        [self.params setObject:string forKey:@"nonce_str"];
+        //[self.params setObject:string forKey:@"nonce_str"];
         
     }else if ([self.currentElement isEqualToString:@"sign"]){
         self.model.sign = string;
-        [self.params setObject:string forKey:@"sign"];
+        //[self.params setObject:string forKey:@"sign"];
         
     }else if ([self.currentElement isEqualToString:@"result_code"]){
         self.model.result_code = string;
-        [self.params setObject:string forKey:@"result_code"];
+       //[self.params setObject:string forKey:@"result_code"];
         
     }else if ([self.currentElement isEqualToString:@"err_code"]){
         self.model.err_code = string;
-        [self.params setObject:string forKey:@"err_code"];
+        //[self.params setObject:string forKey:@"err_code"];
         
     }else if ([self.currentElement isEqualToString:@"err_code_des"]){
         self.model.err_code_des = string;
-        [self.params setObject:string forKey:@"err_code_des"];
+        //[self.params setObject:string forKey:@"err_code_des"];
         
     }else if ([self.currentElement isEqualToString:@"trade_type"]){
         self.model.trade_type = string;
-        [self.params setObject:string forKey:@"trade_type"];
+        //[self.params setObject:string forKey:@"trade_type"];
         
     }else if ([self.currentElement isEqualToString:@"prepay_id"]){
         self.model.prepay_id = string;

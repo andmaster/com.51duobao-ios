@@ -84,7 +84,6 @@
     [params setObject:[Sign sign:params] forKey:@"sign"];//**是 签名
     
     NSString* xml = [OrderUtil toXml:params];
-    //Log(@"xml-->%@",xml);
     [HttpRequest httpPostBody:xml URLString:GEN_URL deletage:self type:PLACETHEORDER];
 }
 
@@ -132,29 +131,38 @@
 -(void)parserDidEndDocument:(id)data{
     NSMutableArray* models = (NSMutableArray*)data;
     PayModel* model = [models objectAtIndex:0];
-    NSMutableDictionary* params = [models objectAtIndex:1];
+    //NSMutableDictionary* params = [models objectAtIndex:1];
+    model.openID = APP_ID_WX;
     model.package = PACKAGE_WX;
+    model.nonce_str = [OrderUtil nonceStr];
     model.timestamp = [OrderUtil timeStamp];
-    model.sign = [Sign sign:params];
-    Log(@"XML:%@",model.description);
+    NSMutableDictionary* newParams = [NSMutableDictionary dictionary];
+    [newParams setObject:APP_ID_WX forKey:@"appid"];
+    [newParams setObject:model.mch_id forKey:@"partnerid"];
+    [newParams setObject:model.prepay_id forKey:@"prepayid"];
+    [newParams setObject:model.nonce_str forKey:@"noncestr"];
+    [newParams setObject:model.timestamp forKey:@"timestamp"];
+    [newParams setObject:model.package forKey:@"package"];
+    model.sign = [Sign sign:newParams];
     [self sendWxPay:model];
 }
 
 /* 掉起微信支付 */
 - (void)sendWxPay:(PayModel*)model{
-    [WXApiRequestHandler sendPartnerId:model.mch_id //商户号
+    [[UserDefault share] saveNonceStr:@""];
+    [WXApiRequestHandler sendOpenID:model.appid
+                        partnerId:model.mch_id //商户号
                          prepayId:model.prepay_id //预支付id
                          nonceStr:model.nonce_str //随机字符串
                         timeStamp:model.timestamp //时间戳
                           package:model.package //扩展字段
                              sign:model.sign]; //签名
-     
-    
 }
 
 
 /* 返回支付结果 */
 - (void)managerDidRecvPayResponse:(PayResp *)respones{
+    [[UserDefault share] saveNonceStr:nil];//清楚随机字符串
     Log(@"%i",respones.errCode);//-2用户点击取消或返回
     if (respones.errCode == WXSuccess) {
         [self.viewController showToast:@"支付成功"];
