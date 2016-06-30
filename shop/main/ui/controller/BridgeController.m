@@ -136,14 +136,14 @@
     model.package = PACKAGE_WX;
     model.nonce_str = [OrderUtil nonceStr];
     model.timestamp = [OrderUtil timeStamp];
-    NSMutableDictionary* newParams = [NSMutableDictionary dictionary];
-    [newParams setObject:APP_ID_WX forKey:@"appid"];
-    [newParams setObject:model.mch_id forKey:@"partnerid"];
-    [newParams setObject:model.prepay_id forKey:@"prepayid"];
-    [newParams setObject:model.nonce_str forKey:@"noncestr"];
-    [newParams setObject:model.timestamp forKey:@"timestamp"];
-    [newParams setObject:model.package forKey:@"package"];
-    model.sign = [Sign sign:newParams];
+    NSMutableDictionary* repParams = [NSMutableDictionary dictionary];
+    [repParams setObject:APP_ID_WX forKey:@"appid"];
+    [repParams setObject:model.mch_id forKey:@"partnerid"];
+    [repParams setObject:model.prepay_id forKey:@"prepayid"];
+    [repParams setObject:model.nonce_str forKey:@"noncestr"];
+    [repParams setObject:model.timestamp forKey:@"timestamp"];
+    [repParams setObject:model.package forKey:@"package"];
+    model.sign = [Sign sign:repParams];
     [self sendWxPay:model];
 }
 
@@ -163,7 +163,6 @@
 /* 返回支付结果 */
 - (void)managerDidRecvPayResponse:(PayResp *)respones{
     [[UserDefault share] saveNonceStr:nil];//清楚随机字符串
-    Log(@"%i",respones.errCode);//-2用户点击取消或返回
     if (respones.errCode == WXSuccess) {
         [self.viewController showToast:@"支付成功"];
     }

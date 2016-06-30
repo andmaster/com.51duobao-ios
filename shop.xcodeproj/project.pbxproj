@@ -822,8 +822,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -844,7 +844,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "c0a26272-9af6-4729-863d-fd1feb6bee41";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -857,8 +857,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -879,7 +879,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "c0a26272-9af6-4729-863d-fd1feb6bee41";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 			};
 			name = Release;

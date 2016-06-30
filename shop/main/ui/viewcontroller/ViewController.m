@@ -39,8 +39,8 @@
     [self.navigationController.backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.navigationBar addSubview:self.webViewProgressView];
     [WXApiManager sharedManager].delegate = [BridgeController share];
-    UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.payButton];
-    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
+    //UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.payButton];
+    //self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
