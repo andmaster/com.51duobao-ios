@@ -19,7 +19,7 @@
 #import "XMLUtil.h"
 #import "ViewController.h"
 
-@interface BridgeController()<HttpRequestDeletage,XMLUtilDeletage>
+@interface BridgeController()<HttpRequestDeletage,XMLUtilDeletage,HttpRequestDeletage>
 
 @property(nonatomic,strong)BaseViewController* viewController;
 
@@ -44,36 +44,41 @@
 - (void)registerHandler:(WebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController{
     _viewController = viewController;
     /*微信支付*/
-    [bridge registerHandler:@"PayWx" handler:^(id data, WVJBResponseCallback responseCallback) {
-        Log(@"ObjC Echo called with: %@", data);
+    [bridge registerHandler:PayByWx handler:^(id data, WVJBResponseCallback responseCallback) {
         //responseCallback(data);//回调数据的block方法
-        [self  executUnifiedOrder:data];
-        //[HttpRequest httpGet:nil URLString:GEN_URL deletage:self type:SAVEORDER];//案例
+        NSArray* param = [((NSString*)data) componentsSeparatedByString:@"#"];
+        Log(@"javascript:body=%@,outTradeNo=%@,totalFee=%@",param[0],param[1],param[2]);
+        NSString* json = [NSString stringWithFormat:@"{\"body\":\"%@\",\"out_trade_no\":\"%@\",\"total_fee\":\"%@\"}",param[0],param[1],param[2]];
+        Log(@"javascript:%@,%@",json, [self.viewController parserWithJsonString:json]);
+        [self  executUnifiedOrder:[self.viewController parserWithJsonString:json]];
     }];
     
     /*支付宝支付*/
-    [bridge registerHandler:@"PayAlipay" handler:^(id data, WVJBResponseCallback responseCallback) {
-        Log(@"ObjC Echo called with: %@", data);
+    [bridge registerHandler:PayByAlipay handler:^(id data, WVJBResponseCallback responseCallback) {
         //responseCallback(data);//回调数据的block方法
+    }];
+    
+    [bridge registerHandler:LoginByWx handler:^(id data, WVJBResponseCallback responseCallback) {
+        [self sendWxAuth];//微信登录
     }];
 }
 
 /* 执行统一下单 */
 - (void)executUnifiedOrder:(id) data{
     //设置参数
-    NSDictionary* callParams = (NSDictionary*)data;
+    NSDictionary* dictionary = (NSDictionary*)data;
     
     NSMutableDictionary* params = [NSMutableDictionary dictionary];
     [params setObject:APP_ID_WX forKey:@"appid"];//**是 应用ID
     [params setObject:MCH_ID_WX forKey:@"mch_id"];//**是 商户号
     [params setObject:@"" forKey:@"device_info"];//否 设备号
     [params setObject:[OrderUtil nonceStr] forKey:@"nonce_str"];//**是 随机字符串
-    [params setObject:@"测试商品test" forKey:@"body"];//**是 商品描述
+    [params setObject:[dictionary objectForKey:@"body"] forKey:@"body"];//**是 商品描述
     [params setObject:@"" forKey:@"detail"];//否 商品详情
     [params setObject:@"" forKey:@"attach"];//否 附加数据
-    [params setObject:[OrderUtil getSystemTime]forKey:@"out_trade_no"];//**是 商户订单号
+    [params setObject:[dictionary objectForKey:@"out_trade_no"] forKey:@"out_trade_no"];//**是 商户订单号
     [params setObject:@"" forKey:@"fee_type"];//否 货币类型
-    [params setObject:@"1" forKey:@"total_fee"];//**是 总金额
+    [params setObject:[dictionary objectForKey:@"total_fee"] forKey:@"total_fee"];//**是 总金额
     [params setObject:[OrderUtil getIPAddress] forKey:@"spbill_create_ip"];//**是 终端IP
     [params setObject:@"" forKey:@"time_start"];//否 交易起始时间
     [params setObject:@"" forKey:@"time_expire"];//否 交易结束时间
@@ -85,46 +90,6 @@
     
     NSString* xml = [OrderUtil toXml:params];
     [HttpRequest httpPostBody:xml URLString:GEN_URL deletage:self type:PLACETHEORDER];
-}
-
-/* 网络请求成功 */
--(void)successObject:(id)responseObject response:(NSURLResponse *)response type:(HttpTagType)type{
-    switch (type) {
-        case PLACETHEORDER:{//返回统一下单数据
-            NSXMLParser* XMLParser = (NSXMLParser*)responseObject;
-            XMLUtil* xmlUtil = [[XMLUtil alloc] initWithXMLParser:XMLParser];
-            xmlUtil.deletage = self;
-            [xmlUtil parse];
-        }
-            break;
-        case SAVEORDER:{
-            Log(@"responseObjectSAVEORDER:%@",responseObject);
-        }
-            break;
-            
-        default:
-            break;
-    }
-    
-}
-
-/* 网络请求失败 */
-- (void)failedError:(NSString *)error type:(HttpTagType)type{
-    switch (type) {
-        case PLACETHEORDER:{
-            Log(@"PLACETHEORDER:%@",error);
-            
-            
-        }
-            break;
-        case SAVEORDER:{
-            Log(@"SAVEORDER:%@",error);
-        }
-            break;
-            
-        default:
-            break;
-    }
 }
 
 //拿到解析结果
@@ -149,7 +114,7 @@
 
 /* 掉起微信支付 */
 - (void)sendWxPay:(PayModel*)model{
-    [[UserDefault share] saveNonceStr:@""];
+    [[UserDefault share] saveNonceStr:@""];//清楚随机字符串
     [WXApiRequestHandler sendOpenID:model.appid
                         partnerId:model.mch_id //商户号
                          prepayId:model.prepay_id //预支付id
@@ -162,7 +127,6 @@
 
 /* 返回支付结果 */
 - (void)managerDidRecvPayResponse:(PayResp *)respones{
-    [[UserDefault share] saveNonceStr:nil];//清楚随机字符串
     if (respones.errCode == WXSuccess) {
         [self.viewController showToast:@"支付成功"];
     }
@@ -170,5 +134,76 @@
     NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:[HOST stringByAppendingString:@"/?/mobile/home"]]];
     [vc.webView loadRequest:request];
 }
+
+/*  微信登录授权*/
+- (void)sendWxAuth{
+    [WXApiRequestHandler sendOpenID:APP_ID_WX scope:SCOPE_WX state:STATE_WX];
+}
+
+/* 返回微信登录响应*/
+-(void)managerDidRecvAuthResponse:(SendAuthResp *)response{
+    if (response.errCode == WXSuccess) {
+        [self getWxAccessToken:response.code];
+    }
+}
+
+#pragma mark -- http request --
+
+-(void)getWxAccessToken:(NSString*)APP_CODE_WX{
+    NSMutableDictionary* params = [NSMutableDictionary dictionary];
+    [params setObject:APP_ID_WX forKey:@"appid"];
+    [params setObject:APP_SECTET_WX forKey:@"secret"];
+    [params setObject:APP_CODE_WX forKey:@"code"];
+    [params setObject:GRANT_TYPE_WX forKey:@"grant_type"];
+    [HttpRequest httpGet:params URLString:GET_ACCESS_TOKEN deletage:self type:WXACCESSTOKEN];
+}
+
+-(void)successObject:(id)responseObject response:(NSURLResponse *)response type:(HttpTagType)type{
+    switch (type) {
+        case PLACETHEORDER:{//返回统一下单数据
+            NSXMLParser* XMLParser = (NSXMLParser*)responseObject;
+            XMLUtil* xmlUtil = [[XMLUtil alloc] initWithXMLParser:XMLParser];
+            xmlUtil.deletage = self;
+            [xmlUtil parse];
+        }
+            break;
+        case SAVEORDER:{
+            Log(@"responseObjectSAVEORDER:%@",responseObject);
+        }
+            break;
+        case WXACCESSTOKEN:{
+            Log(@"responseObjectSAVEORDER:%@",responseObject);
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+}
+
+- (void)failedError:(NSString *)error type:(HttpTagType)type{
+    switch (type) {
+        case PLACETHEORDER:{
+            Log(@"PLACETHEORDER:%@",error);
+            
+            
+        }
+            break;
+        case SAVEORDER:{
+            Log(@"SAVEORDER:%@",error);
+        }
+            break;
+            
+        case WXACCESSTOKEN:{
+            Log(@"SAVEORDER:%@",error);
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 
 @end

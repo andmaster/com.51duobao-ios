@@ -46,6 +46,7 @@
 		84F0291F1D04752300F1CCD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F0291D1D04752300F1CCD0 /* LaunchScreen.storyboard */; };
 		84F0292A1D04752300F1CCD0 /* shopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029291D04752300F1CCD0 /* shopTests.m */; };
 		84F029351D04752300F1CCD0 /* shopUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029341D04752300F1CCD0 /* shopUITests.m */; };
+		84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */; };
 		B71D2260B05B8345045A98BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B76F05A019A89545238D47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +140,8 @@
 		84F029301D04752300F1CCD0 /* shop.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shop.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F029341D04752300F1CCD0 /* shopUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopUITests.m; sourceTree = "<group>"; };
 		84F029361D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F3A2451D274DF700A71328 /* SendAuthReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendAuthReq+Request.h"; sourceTree = "<group>"; };
+		84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendAuthReq+Request.m"; sourceTree = "<group>"; };
 		A8B76F05A019A89545238D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -315,6 +318,8 @@
 			children = (
 				84E397A41D13FF820023A882 /* PayReq+Request.h */,
 				84E397A51D13FF820023A882 /* PayReq+Request.m */,
+				84F3A2451D274DF700A71328 /* SendAuthReq+Request.h */,
+				84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */,
 			);
 			path = wechat;
 			sourceTree = "<group>";
@@ -668,6 +673,7 @@
 				8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
+				84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */,
 				84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */,
 				84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */,
 				84F029111D04752300F1CCD0 /* main.m in Sources */,

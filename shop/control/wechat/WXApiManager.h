@@ -14,6 +14,7 @@
 @optional
 
 - (void)managerDidRecvPayResponse:(PayResp*)respones;
+- (void)managerDidRecvAuthResponse:(SendAuthResp *)response;//登录
 
 @end
 

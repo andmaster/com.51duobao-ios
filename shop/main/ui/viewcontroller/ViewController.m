@@ -76,7 +76,8 @@
 #pragma mark -- self`s method --
 
 -(void)pay:(UIButton*)button{
-    [[BridgeController share] executUnifiedOrder:@{@"money":@"123"}];
+//    [[BridgeController share] executUnifiedOrder:@{@"money":@"123"}];
+    [[BridgeController share] sendWxAuth];
 }
 
 
@@ -119,7 +120,7 @@
     if (_payButton == nil) {
         _payButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _payButton.frame = CGRectMake(0, 0, 72, 48);
-        [_payButton setTitle:@"微信支付" forState:UIControlStateNormal];
+        [_payButton setTitle:@"微信支付/登录" forState:UIControlStateNormal];
         [_payButton addTarget:self action:@selector(pay:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _payButton;

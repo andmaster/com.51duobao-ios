@@ -17,6 +17,8 @@
 +(instancetype)share;
 
 -(void)executUnifiedOrder:(id)data;
+/*  微信登录授权*/
+- (void)sendWxAuth;
 
 /* 监听点击js */
 - (void)registerHandler:(WebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController;

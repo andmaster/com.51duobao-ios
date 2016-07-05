@@ -12,7 +12,8 @@
 typedef enum{
 
     PLACETHEORDER,//统一下单
-    SAVEORDER//保存订单
+    SAVEORDER,//保存订单
+    WXACCESSTOKEN//微信授权后调用接口
     
 }HttpTagType;
 

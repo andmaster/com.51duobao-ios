@@ -33,6 +33,12 @@
             PayResp* respones = (PayResp*)resp;
             [delegate managerDidRecvPayResponse:respones];
         }
+    }else if ([resp isKindOfClass:[SendAuthResp class]]) {
+        if (delegate
+            && [delegate respondsToSelector:@selector(managerDidRecvAuthResponse:)]) {
+            SendAuthResp *authResp = (SendAuthResp *)resp;
+            [delegate managerDidRecvAuthResponse:authResp];
+        }
     }
 }
 
