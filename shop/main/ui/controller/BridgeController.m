@@ -47,7 +47,8 @@
     [bridge registerHandler:PayByWx handler:^(id data, WVJBResponseCallback responseCallback) {
         //responseCallback(data);//回调数据的block方法
         NSArray* param = [((NSString*)data) componentsSeparatedByString:@"#"];
-        Log(@"javascript:body=%@,outTradeNo=%@,totalFee=%@",param[0],param[1],param[2]);
+        NSString* totalFee = [NSString stringWithFormat:@"%@00",param[2]];
+        Log(@"javascript:body=%@,outTradeNo=%@,totalFee=%@",param[0],param[1],totalFee);
         NSString* json = [NSString stringWithFormat:@"{\"body\":\"%@\",\"out_trade_no\":\"%@\",\"total_fee\":\"%@\"}",param[0],param[1],param[2]];
         Log(@"javascript:%@,%@",json, [self.viewController parserWithJsonString:json]);
         [self  executUnifiedOrder:[self.viewController parserWithJsonString:json]];
