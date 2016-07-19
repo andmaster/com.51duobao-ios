@@ -9,7 +9,21 @@
 #ifndef Constants_h
 #define Constants_h
 
+#pragma mark -- URL --
+
 static NSString* const HOST = @"http://app.dd1yyg.com";
+
+static NSString* const MOBILE = @"/?/mobile/mobile"; //主页
+
+static NSString* const GOODSLIST = @"/?/mobile/mobile/glist"; //商品列表（全部商品）
+
+static NSString* const LOTTERY = @"/?/mobile/mobile/lottery";//最新揭晓
+
+static NSString* const CARTLIST = @"/?/mobile/cart/cartlist";//购物车
+
+static NSString* const LOGINURL = @"/?/mobile/user/login";//登录
+
+static NSString* const HOME = @"/?/mobile/home";//主页
 
 //**是 APP_ID 替换为你的应用从官方网站申请到的合法appId
 static NSString* const APP_ID_WX = @"wx6a6dabef860d5157";
@@ -22,7 +36,9 @@ static NSString* const TRADE_TYPE_WX = @"APP";
 //**是 扩展字段
 static NSString* const PACKAGE_WX = @"Sign=WXPay";
 //**是 微信订单通知地址
-static NSString* const NOTIFY_URL_WX = @"http://app.dd1yyg.com/payok.php";
+static NSString* const NOTIFY_URL_WX = @"http://app.dd1yyg.com/payok.php";//异步地址
+//微信支付同步地址
+static NSString* const NOTIFY_URL_PAYED_WX = @"http://app.dd1yyg.com/pay.php";//同步地址
 
 //**是 登录
 static NSString* const  GRANT_TYPE_WX = @"authorization_code";

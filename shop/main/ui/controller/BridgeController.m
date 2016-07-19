@@ -46,12 +46,27 @@
     /*微信支付*/
     [bridge registerHandler:PayByWx handler:^(id data, WVJBResponseCallback responseCallback) {
         //responseCallback(data);//回调数据的block方法
-        NSArray* params = [((NSString*)data) componentsSeparatedByString:@"#"];
-        NSMutableDictionary* param = [NSMutableDictionary dictionary];
-        [param setObject:params[0] forKey:@"body"];
-        [param setObject:params[1] forKey:@"out_trade_no"];
-        [param setObject:params[2] forKey:@"total_fee"];
-        [self  executUnifiedOrder:param];
+        
+        if (data == nil) { return ; }
+        
+        if ([data isKindOfClass:[NSString class]]) {
+            
+            NSArray* params = [((NSString*)data) componentsSeparatedByString:@"#"];
+            
+            if (params.count == 3) {
+                
+                NSMutableDictionary* param = [NSMutableDictionary dictionary];
+                
+                [param setObject:[params objectAtIndex:0] forKey:@"body"];
+                
+                [param setObject:[params objectAtIndex:1] forKey:@"out_trade_no"];
+                
+                [param setObject:[params objectAtIndex:2] forKey:@"total_fee"];
+                
+                [self  executUnifiedOrder:param];
+                
+            }
+        }
     }];
     
     /*支付宝支付*/

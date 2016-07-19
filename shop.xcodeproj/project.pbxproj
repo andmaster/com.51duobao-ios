@@ -15,8 +15,6 @@
 		8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */; };
 		84A7B4331D06CFFC001802B5 /* back-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */; };
 		84A7B4341D06CFFC001802B5 /* back-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */; };
-		84A7B4361D06D254001802B5 /* appIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4351D06D254001802B5 /* appIcon@3x.png */; };
-		84A7B4381D06D25A001802B5 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4371D06D25A001802B5 /* appIcon@2x.png */; };
 		84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA39891D184FB1001F12ED /* HttpViewController.swift */; };
 		84B0A3711D12A61F00215200 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A36C1D12A61F00215200 /* libWeChatSDK.a */; };
 		84B0A3741D12A75600215200 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A3731D12A75600215200 /* SystemConfiguration.framework */; };
@@ -47,6 +45,8 @@
 		84F0292A1D04752300F1CCD0 /* shopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029291D04752300F1CCD0 /* shopTests.m */; };
 		84F029351D04752300F1CCD0 /* shopUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029341D04752300F1CCD0 /* shopUITests.m */; };
 		84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */; };
+		84F6E5081D37650F00E399D0 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6E5071D37650F00E399D0 /* appIcon@2x.png */; };
+		84F6E50A1D37651800E399D0 /* appIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6E5091D37651800E399D0 /* appIcon@3x.png */; };
 		B71D2260B05B8345045A98BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B76F05A019A89545238D47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -86,8 +86,6 @@
 		8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Custom.m"; sourceTree = "<group>"; };
 		84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow@2x.png"; sourceTree = "<group>"; };
 		84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow@3x.png"; sourceTree = "<group>"; };
-		84A7B4351D06D254001802B5 /* appIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@3x.png"; sourceTree = "<group>"; };
-		84A7B4371D06D25A001802B5 /* appIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@2x.png"; sourceTree = "<group>"; };
 		84AA39891D184FB1001F12ED /* HttpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpViewController.swift; sourceTree = "<group>"; };
 		84AA398C1D18512F001F12ED /* shop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "shop-Bridging-Header.h"; sourceTree = "<group>"; };
 		84B0A36C1D12A61F00215200 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -142,6 +140,8 @@
 		84F029361D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3A2451D274DF700A71328 /* SendAuthReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendAuthReq+Request.h"; sourceTree = "<group>"; };
 		84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendAuthReq+Request.m"; sourceTree = "<group>"; };
+		84F6E5071D37650F00E399D0 /* appIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@2x.png"; sourceTree = "<group>"; };
+		84F6E5091D37651800E399D0 /* appIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@3x.png"; sourceTree = "<group>"; };
 		A8B76F05A019A89545238D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,7 +253,7 @@
 		84A7B42F1D06CFFC001802B5 /* @2x */ = {
 			isa = PBXGroup;
 			children = (
-				84A7B4371D06D25A001802B5 /* appIcon@2x.png */,
+				84F6E5071D37650F00E399D0 /* appIcon@2x.png */,
 				84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */,
 			);
 			path = "@2x";
@@ -262,7 +262,7 @@
 		84A7B4311D06CFFC001802B5 /* @3x */ = {
 			isa = PBXGroup;
 			children = (
-				84A7B4351D06D254001802B5 /* appIcon@3x.png */,
+				84F6E5091D37651800E399D0 /* appIcon@3x.png */,
 				84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */,
 			);
 			path = "@3x";
@@ -587,11 +587,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F0291F1D04752300F1CCD0 /* LaunchScreen.storyboard in Resources */,
-				84A7B4381D06D25A001802B5 /* appIcon@2x.png in Resources */,
 				84F0291C1D04752300F1CCD0 /* Assets.xcassets in Resources */,
+				84F6E50A1D37651800E399D0 /* appIcon@3x.png in Resources */,
 				84F0291A1D04752300F1CCD0 /* Main.storyboard in Resources */,
+				84F6E5081D37650F00E399D0 /* appIcon@2x.png in Resources */,
 				84A7B4341D06CFFC001802B5 /* back-arrow@3x.png in Resources */,
-				84A7B4361D06D254001802B5 /* appIcon@3x.png in Resources */,
 				84A7B4331D06CFFC001802B5 /* back-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -828,8 +828,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -850,7 +850,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "c0a26272-9af6-4729-863d-fd1feb6bee41";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -863,8 +863,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -885,7 +885,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "c0a26272-9af6-4729-863d-fd1feb6bee41";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 			};
 			name = Release;
