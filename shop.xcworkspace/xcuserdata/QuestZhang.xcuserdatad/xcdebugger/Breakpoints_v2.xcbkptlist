@@ -20,12 +20,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "shop/main/ui/controller/BridgeController.m"
-            timestampString = "489484601.574497"
+            timestampString = "490641880.10467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
-            landmarkName = "-successObject:response:type:"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "-managerDidRecvPayResponse:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

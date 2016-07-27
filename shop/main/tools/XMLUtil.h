@@ -9,15 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "PayModel.h"
 
-@protocol XMLUtilDeletage <NSObject>
-
--(void)parserDidEndDocument:(id)userInfo;
-
-@end
+static NSString* const XMLParserDidEndNotification;
 
 @interface XMLUtil : NSObject<NSXMLParserDelegate>
-
-@property(nonatomic,weak) id<XMLUtilDeletage> deletage;
 
 //添加属性
 @property (nonatomic, strong) NSXMLParser *XMLParser;

@@ -10,8 +10,4 @@
 
 @interface UINavigationController (Custom)
 
-@property(nonatomic,strong) UIButton* backButton;
--(void) setHideBackButton:(BOOL)flag;
-@property(nonatomic,strong) UIBarButtonItem* leftBarButtonItem;
-
 @end

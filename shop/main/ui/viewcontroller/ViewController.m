@@ -25,7 +25,9 @@
 @property(nonatomic, strong) NSMutableArray* tabUrls;
 @property(nonatomic, strong) NSMutableArray* cachaUrl;
 @property(nonatomic, assign) BOOL loadingSuccess;
-@property(nonatomic, strong) UIButton* payButton;
+
+@property(nonatomic, strong) UIBarButtonItem* backBarButtonItem;
+@property(nonatomic, strong) UIBarButtonItem* rightBarButtonItem;
 
 @end
 
@@ -33,56 +35,78 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.navigationItem setLeftBarButtonItem:self.navigationController.leftBarButtonItem];
+    
+    self.navigationItem.rightBarButtonItem = self.rightBarButtonItem;
+    
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    
     [self.view addSubview:self.webView];
-    [self.navigationController.backButton addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+    
     [self.navigationController.navigationBar addSubview:self.webViewProgressView];
+    
     [WXApiManager sharedManager].delegate = [BridgeController share];
-    //UIBarButtonItem* rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.payButton];
-    //self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
     NSURLRequest* URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:HOST]];
+    
     [self.webView loadRequest:URLRequest];
+    
     //[self registerProgressProxy];
+    
     [[BridgeController share] registerHandler:self.bridge viewController:self];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
+    
     [super viewDidAppear:animated];
     
 }
 
 /* 加载URL精度条 */
 - (void)registerProgressProxy{
+    
     self.webView.delegate = self.progressProxy;
+    
     self.progressProxy.webViewProxyDelegate = self;
+    
     self.progressProxy.progressDelegate = self;
 }
 
--(void) goBack:(UIButton*)button{
+- (void)didReceiveMemoryWarning {
+    
+    [super didReceiveMemoryWarning];
+}
+
+-(void) didBackBarItem:(UIBarButtonItem*)button{
+    
     if ([self.webView canGoBack]) {
+        
         [self.webView goBack];
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark -- self`s method --
 
--(void)pay:(UIButton*)button{
-//    [[BridgeController share] executUnifiedOrder:@{@"money":@"123"}];
-    [[BridgeController share] sendWxAuth];
+-(void)didRightBarItem:(UIBarButtonItem*)rightBarButtonItem{
+    
+    //[[BridgeController share] executUnifiedOrder:@{@"money":@"123"}];
+    
+    //[[BridgeController share] sendWxAuth];
+    
+    NSString* URLString = [HOST stringByAppendingString:SEARCH];
+    
+    NSURLRequest* URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    
+    [self.webView loadRequest:URLRequest];
 }
 
 
 #pragma mark -- UIWebViewDeletage --
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
     return !([request.URL.absoluteString compare:self.cachaUrl[0]] == NSOrderedSame);
 }
 
@@ -91,50 +115,83 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView{
+    
     [self.cachaUrl replaceObjectAtIndex:0 withObject:webView.request.URL.absoluteString];
+    
     [self loadingTitle];
+    
     NSString* URLString = webView.request.URL.absoluteString;
-    self.navigationController.backButton.hidden = [self.tabUrls containsObject:URLString];
+    
+    self.navigationItem.leftBarButtonItem = [self.tabUrls containsObject:URLString] ? nil : self.backBarButtonItem;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
+    
     [self loadingTitle];
+    
     if([error code] == NSURLErrorCancelled){ return; }
 }
 
 /* 加载网页上的title */
 - (void)loadingTitle{
+    
     self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
 }
 
 #pragma mark -- NJKWebViewProgressDelegate --
 - (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress{
+    
     [self loadingTitle];
+    
     [self.webViewProgressView setProgress:progress animated:YES];
 }
 
 
 #pragma mark -- getter --
 
--(UIButton *)payButton{
-    if (_payButton == nil) {
-        _payButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _payButton.frame = CGRectMake(0, 0, 72, 48);
-        [_payButton setTitle:@"微信支付/登录" forState:UIControlStateNormal];
-        [_payButton addTarget:self action:@selector(pay:) forControlEvents:UIControlEventTouchUpInside];
+-(UIBarButtonItem *)backBarButtonItem{
+    
+    if (_backBarButtonItem == nil) {
+        
+        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back-arrow"] style:UIBarButtonItemStylePlain target:self action:@selector(didBackBarItem:)];
+        
+       [_backBarButtonItem setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back-arrow"]]];
     }
-    return _payButton;
+    
+    return _backBarButtonItem;
+}
+
+-(UIBarButtonItem *)rightBarButtonItem{
+    
+    if (_rightBarButtonItem == nil) {
+        
+         _rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(didRightBarItem:)];
+        
+        [_rightBarButtonItem setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"search"]]];
+
+    }
+    
+    return _rightBarButtonItem;
 }
 
 -(UIWebView *)webView{
+    
     if (_webView == nil) {
+        
         CGRect frame = CGRectMake(0, 0, self.width, self.height);
+        
         _webView = [[UIWebView alloc] initWithFrame:frame];
+        
         _webView.backgroundColor = [UIColor whiteColor];
+        
         //_webview.dataDetectorTypes=UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
+       
         [_webView.scrollView setShowsVerticalScrollIndicator:NO];//隐藏垂直滚动条
+       
         _webView.scalesPageToFit = YES;
+        
         [_webView didNotLeftOrRightScrollForWebView];
+       
         [_webView clearBackColorForWebView];
     }
     return _webView;
@@ -167,21 +224,37 @@
 }
 
 -(NSMutableArray *)tabUrls{
+    
     if (_tabUrls == nil) {
+        
         _tabUrls = [NSMutableArray array];
+        
         [_tabUrls addObject:HOST];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:@"/"]];
+        
         [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",MOBILE]];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:MOBILE]];
+        
         [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",GOODSLIST]];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:GOODSLIST]];
+        
         [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",LOTTERY]];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:LOTTERY]];
+        
         [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",CARTLIST]];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:CARTLIST]];
+        
         [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",LOGINURL]];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:LOGINURL]];
+        
         [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",HOME]];
+        
         [_tabUrls addObject:[HOST stringByAppendingString:HOME]];
         
 //        tabUrls.add("data:text/html,chromewebdata");

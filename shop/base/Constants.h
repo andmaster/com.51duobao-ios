@@ -25,6 +25,8 @@ static NSString* const LOGINURL = @"/?/mobile/user/login";//登录
 
 static NSString* const HOME = @"/?/mobile/home";//主页
 
+static NSString* const SEARCH = @"/?/mobile/mobile/search1";//搜索
+
 //**是 APP_ID 替换为你的应用从官方网站申请到的合法appId
 static NSString* const APP_ID_WX = @"wx6a6dabef860d5157";
 //**是 appSectet

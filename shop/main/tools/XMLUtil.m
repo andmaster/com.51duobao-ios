@@ -10,6 +10,8 @@
 
 @implementation XMLUtil
 
+static NSString* const XMLParserDidEndNotification = @"xml_parser_did_end_notify";
+
 - (instancetype)initWithXMLParser:(NSXMLParser*)parser{
     self = [super init];
     if (self) {
@@ -35,6 +37,7 @@
         self.model = [[PayModel alloc] init];
     }
 }
+
 //获取节点内容
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string{
     
@@ -43,34 +46,42 @@
         //[self.params setObject:string forKey:@"return_code"];
         
     }else if ([self.currentElement isEqualToString:@"return_msg"]){
+        
         self.model.return_msg = string;
         //[self.params setObject:string forKey:@"return_msg"];
         
     }else if ([self.currentElement isEqualToString:@"appid"]){
+        
         self.model.appid = string;
         //[self.params setObject:string forKey:@"appid"];
         
     }else if ([self.currentElement isEqualToString:@"mch_id"]){
+        
         self.model.mch_id = string;
         [self.params setObject:string forKey:@"mch_id"];
         
     }else if ([self.currentElement isEqualToString:@"device_info"]){
+        
         self.model.device_info = string;
         //[self.params setObject:string forKey:@"device_info"];
         
     }else if ([self.currentElement isEqualToString:@"nonce_str"]){
+        
         self.model.nonce_str = string;
         //[self.params setObject:string forKey:@"nonce_str"];
         
     }else if ([self.currentElement isEqualToString:@"sign"]){
+        
         self.model.sign = string;
         //[self.params setObject:string forKey:@"sign"];
         
     }else if ([self.currentElement isEqualToString:@"result_code"]){
+        
         self.model.result_code = string;
        //[self.params setObject:string forKey:@"result_code"];
         
     }else if ([self.currentElement isEqualToString:@"err_code"]){
+        
         self.model.err_code = string;
         //[self.params setObject:string forKey:@"err_code"];
         
@@ -79,10 +90,12 @@
         //[self.params setObject:string forKey:@"err_code_des"];
         
     }else if ([self.currentElement isEqualToString:@"trade_type"]){
+        
         self.model.trade_type = string;
         //[self.params setObject:string forKey:@"trade_type"];
         
     }else if ([self.currentElement isEqualToString:@"prepay_id"]){
+        
         self.model.prepay_id = string;
         [self.params setObject:string forKey:@"prepay_id"];
     }
@@ -92,6 +105,7 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(nullable NSString *)namespaceURI qualifiedName:(nullable NSString *)qName{
     
     if ([elementName isEqualToString:@"xml"]) {
+        
         [self.userInfo addObject:self.model];
         [self.userInfo addObject:self.params];
     }
@@ -101,9 +115,7 @@
 //解析结束
 - (void)parserDidEndDocument:(NSXMLParser *)parser{
     NSLog(@"parserDidEndDocument...");
-    if (_deletage != nil && [_deletage respondsToSelector:@selector(parserDidEndDocument:)]) {
-        [_deletage parserDidEndDocument:self.userInfo];
-    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:XMLParserDidEndNotification object:(NSMutableArray*)self.userInfo];
 }
 
 //初始化数组，存放解析后的数据
