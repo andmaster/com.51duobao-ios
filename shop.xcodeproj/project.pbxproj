@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403747B1D1684DC009D7D64 /* OrderUtil.m */; };
 		8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8403747D1D168E6A009D7D64 /* IPAddress.c */; };
+		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
 		8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */; };
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
 		8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */; };
@@ -74,6 +75,8 @@
 		8403747B1D1684DC009D7D64 /* OrderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderUtil.m; sourceTree = "<group>"; };
 		8403747D1D168E6A009D7D64 /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
 		8403747E1D168E6A009D7D64 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JavaScriptAlert.h"; sourceTree = "<group>"; };
+		844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JavaScriptAlert.m"; sourceTree = "<group>"; };
 		8487C75B1D0D8BD5004B8F6C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8487C75E1D0D8BD5004B8F6C /* BaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */,
 				8487C76F1D0DDF3F004B8F6C /* UINavigationController+Custom.h */,
 				8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */,
+				844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */,
+				844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -675,6 +680,7 @@
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
 				84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */,
 				84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */,
+				844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */,
 				84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */,
 				84F029111D04752300F1CCD0 /* main.m in Sources */,
 				84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */,

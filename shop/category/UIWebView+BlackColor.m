@@ -15,7 +15,7 @@
     self.opaque = NO;
     for (UIView *aView in [self subviews]) {
         if ([aView isKindOfClass:[UIScrollView class]]) {
-            //            [(UIScrollView *)aView setShowsVerticalScrollIndicator:NO];
+            //[(UIScrollView *)aView setShowsVerticalScrollIndicator:NO];
             for (UIView *shadowView in aView.subviews) {
                 if ([shadowView isKindOfClass:[UIImageView class]]) {
                     shadowView.hidden = YES;//上下滚动出边界时的黑色的图片 也就是拖拽后的上下阴影
