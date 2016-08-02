@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403747B1D1684DC009D7D64 /* OrderUtil.m */; };
 		8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8403747D1D168E6A009D7D64 /* IPAddress.c */; };
+		840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BADB01D4EDFC60073FABB /* URLSetUtil.m */; };
 		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
 		8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */; };
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
@@ -75,6 +76,8 @@
 		8403747B1D1684DC009D7D64 /* OrderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderUtil.m; sourceTree = "<group>"; };
 		8403747D1D168E6A009D7D64 /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
 		8403747E1D168E6A009D7D64 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		840BADAF1D4EDFC60073FABB /* URLSetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSetUtil.h; sourceTree = "<group>"; };
+		840BADB01D4EDFC60073FABB /* URLSetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSetUtil.m; sourceTree = "<group>"; };
 		844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JavaScriptAlert.h"; sourceTree = "<group>"; };
 		844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JavaScriptAlert.m"; sourceTree = "<group>"; };
 		8487C75B1D0D8BD5004B8F6C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 				8403747E1D168E6A009D7D64 /* IPAddress.h */,
 				84D1D2D71D19108300F47C44 /* XMLUtil.h */,
 				84D1D2D81D19108300F47C44 /* XMLUtil.m */,
+				840BADAF1D4EDFC60073FABB /* URLSetUtil.h */,
+				840BADB01D4EDFC60073FABB /* URLSetUtil.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -674,6 +679,7 @@
 				8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */,
 				8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */,
 				84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */,
+				840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */,
 				84E3979F1D13E9B10023A882 /* HttpRequest.m in Sources */,
 				8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
@@ -833,9 +839,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -856,7 +863,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -868,9 +875,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -891,7 +899,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 			};
 			name = Release;

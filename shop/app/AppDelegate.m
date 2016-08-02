@@ -23,12 +23,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     //向微信注册
     [WXApi registerApp:APP_ID_WX withDescription:@"丁丁云购 1.0"];
     
     ViewController* rootViewController = [[ViewController alloc] init];
+    
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    
     self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
+    
+    //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(removeLun) userInfo:nil repeats:NO];
+    
+    [NSThread sleepForTimeInterval:3];
+    
     return YES;
 }
 

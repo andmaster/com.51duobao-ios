@@ -12,6 +12,7 @@
 #import "WebViewJavascriptBridge.h"
 #import "UIWebView+BlackColor.h"
 #import "BridgeController.h"
+#import "URLSetUtil.h"
 
 @interface ViewController ()<NJKWebViewProgressDelegate>
 
@@ -22,10 +23,8 @@
 @property(nonatomic, strong) NJKWebViewProgressView *webViewProgressView;
 @property(nonatomic, strong) NJKWebViewProgress *progressProxy;
 @property(nonatomic, strong) WebViewJavascriptBridge* bridge;
-@property(nonatomic, strong) NSMutableArray* tabUrls;
 @property(nonatomic, strong) NSMutableArray* cachaUrl;
 @property(nonatomic, assign) BOOL loadingSuccess;
-
 @property(nonatomic, strong) UIBarButtonItem* backBarButtonItem;
 @property(nonatomic, strong) UIBarButtonItem* rightBarButtonItem;
 
@@ -122,7 +121,7 @@
     
     NSString* URLString = webView.request.URL.absoluteString;
     
-    self.navigationItem.leftBarButtonItem = [self.tabUrls containsObject:URLString] ? nil : self.backBarButtonItem;
+    self.navigationItem.leftBarButtonItem = [[URLSetUtil share].URLSet containsObject:URLString] ? nil : self.backBarButtonItem;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
@@ -223,47 +222,6 @@
     return _progressProxy;
 }
 
--(NSMutableArray *)tabUrls{
-    
-    if (_tabUrls == nil) {
-        
-        _tabUrls = [NSMutableArray array];
-        
-        [_tabUrls addObject:HOST];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:@"/"]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",MOBILE]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:MOBILE]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",GOODSLIST]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:GOODSLIST]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",LOTTERY]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:LOTTERY]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",CARTLIST]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:CARTLIST]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",LOGINURL]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:LOGINURL]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingFormat:@"%@/",HOME]];
-        
-        [_tabUrls addObject:[HOST stringByAppendingString:HOME]];
-        
-//        tabUrls.add("data:text/html,chromewebdata");
-//        tabUrls.add("file:///android_asset/html/error.html");
-//
-    }
-    return _tabUrls;
-}
-
 - (NSMutableArray *)cachaUrl{
     if (_cachaUrl == nil) {
         _cachaUrl = [NSMutableArray array];
@@ -295,7 +253,6 @@
 }
 
 -(void)dealloc{
-    _tabUrls = nil;
     _cachaUrl = nil;
 }
 
