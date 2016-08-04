@@ -19,7 +19,7 @@
 #import "XMLUtil.h"
 #import "ViewController.h"
 
-@interface BridgeController()<HttpRequestDeletage,HttpRequestDeletage>
+@interface BridgeController()<HttpRequestDeletage>
 
 @property(nonatomic,strong)BaseViewController* viewController;
 

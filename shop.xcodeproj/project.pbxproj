@@ -249,6 +249,21 @@
 			path = main;
 			sourceTree = "<group>";
 		};
+		84970A6E1D53003000A548D3 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				84970A6F1D53005000A548D3 /* Network */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		84970A6F1D53005000A548D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		84A7B42E1D06CFFC001802B5 /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +450,7 @@
 		84F0290E1D04752300F1CCD0 /* shop */ = {
 			isa = PBXGroup;
 			children = (
+				84970A6E1D53003000A548D3 /* Core */,
 				84AA398B1D185114001F12ED /* bridge */,
 				84E3979C1D13E9690023A882 /* network */,
 				84B0A3841D12B51400215200 /* control */,
