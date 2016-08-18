@@ -18,6 +18,7 @@
 #import "AFNetworking.h"
 #import "XMLUtil.h"
 #import "ViewController.h"
+#import "RechargeVC.h"
 
 @interface BridgeController()<HttpRequestDeletage>
 
@@ -42,7 +43,11 @@
 
 /* 监听点击js */
 - (void)registerHandler:(WebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController{
+    
     _viewController = viewController;
+    
+    __weak typeof(self) weakSelf = self;
+    
     /*微信支付*/
     [bridge registerHandler:PayByWx handler:^(id data, WVJBResponseCallback responseCallback) {
         //responseCallback(data);//回调数据的block方法
@@ -55,7 +60,7 @@
             
             if (params.count == 4) {
                 
-                [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(parseDidEndDocument:) name:XMLParserDidEndNotification object:nil];
+                [[NSNotificationCenter defaultCenter] addObserver:weakSelf selector:@selector(parseDidEndDocument:) name:XMLParserDidEndNotification object:nil];
                 
                 NSMutableDictionary* param = [NSMutableDictionary dictionary];
                 
@@ -67,8 +72,7 @@
                 
                 [param setObject:[params objectAtIndex:3] forKey:@"spbill_create_ip"];
                 
-                [self  executUnifiedOrder:param];
-                
+                [weakSelf  executUnifiedOrder:param];
             }
         }
     }];
@@ -80,7 +84,18 @@
     
     [bridge registerHandler:LoginByWx handler:^(id data, WVJBResponseCallback responseCallback) {
         
-        [self sendWxAuth];//微信登录
+        [weakSelf sendWxAuth];//微信登录
+    }];
+    
+    //苹果虚拟商品支付
+    [bridge registerHandler:@"PayByApple" handler:^(id data, WVJBResponseCallback responseCallback) {
+        
+        UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:[[RechargeVC alloc] init]];
+        
+        [viewController presentViewController:nav animated:YES completion:^{
+        
+            NSLog(@"完成");
+        }];
     }];
 }
 
@@ -210,6 +225,10 @@
         NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:NOTIFY_URL_PAYED_WX]];
         
         [vc.webView loadRequest:request];
+    }
+    else if ([((ViewController*)self.viewController).webView canGoBack]) {
+        
+        [((ViewController*)self.viewController).webView goBack];
     }
 }
 

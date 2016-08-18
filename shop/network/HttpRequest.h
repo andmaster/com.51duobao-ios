@@ -11,7 +11,7 @@
 
 @protocol HttpRequestDeletage <NSObject>
 
-@required
+@optional
 -(void)successObject:(id)responseObject response:(NSURLResponse*)response type:(HttpTagType) type;
 -(void)failedError:(NSString*)error type:(HttpTagType) type;
 

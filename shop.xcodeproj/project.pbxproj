@@ -15,6 +15,8 @@
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
 		8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */; };
 		8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */; };
+		8497A0CC1D64C71500D7DCE8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */; };
+		8497A0CF1D64C8A100D7DCE8 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */; };
 		84A7B4331D06CFFC001802B5 /* back-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */; };
 		84A7B4341D06CFFC001802B5 /* back-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */; };
 		84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA39891D184FB1001F12ED /* HttpViewController.swift */; };
@@ -34,6 +36,7 @@
 		84D93AA41D15B92E00F282AB /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D93AA31D15B92E00F282AB /* libxml2.2.tbd */; };
 		84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D93AAA1D15C2D000F282AB /* ViewController.m */; };
 		84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D93AAD1D15C43400F282AB /* BridgeController.m */; };
+		84DA12401D657D3F005E952B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DA123F1D657D3F005E952B /* Images.xcassets */; };
 		84E3190D1D11B1720094F1FE /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3190C1D11B1720094F1FE /* NSString+MD5.m */; };
 		84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397821D13C5B20023A882 /* WXApiRequestHandler.m */; };
 		84E397861D13C5DD0023A882 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397851D13C5DD0023A882 /* WXApiResponseHandler.m */; };
@@ -90,6 +93,9 @@
 		8487C76E1D0DC90F004B8F6C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8487C76F1D0DDF3F004B8F6C /* UINavigationController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Custom.h"; sourceTree = "<group>"; };
 		8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Custom.m"; sourceTree = "<group>"; };
+		8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		8497A0CD1D64C8A100D7DCE8 /* RechargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
+		8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
 		84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow@2x.png"; sourceTree = "<group>"; };
 		84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow@3x.png"; sourceTree = "<group>"; };
 		84AA39891D184FB1001F12ED /* HttpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		84D93AAA1D15C2D000F282AB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84D93AAC1D15C43400F282AB /* BridgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeController.h; sourceTree = "<group>"; };
 		84D93AAD1D15C43400F282AB /* BridgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeController.m; sourceTree = "<group>"; };
+		84DA123F1D657D3F005E952B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		84E3190B1D11B1720094F1FE /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		84E3190C1D11B1720094F1FE /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		84E397811D13C5B20023A882 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -156,6 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8497A0CC1D64C71500D7DCE8 /* StoreKit.framework in Frameworks */,
 				84E3F9DC1D1875B4009189DD /* MobileCoreServices.framework in Frameworks */,
 				84D93AA41D15B92E00F282AB /* libxml2.2.tbd in Frameworks */,
 				84B0A3801D12AB3200215200 /* Foundation.framework in Frameworks */,
@@ -191,6 +199,7 @@
 		5C29C2DB6099C8F7412050F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */,
 				84E3F9DB1D1875B4009189DD /* MobileCoreServices.framework */,
 				84D93AA31D15B92E00F282AB /* libxml2.2.tbd */,
 				84B0A37F1D12AB3200215200 /* Foundation.framework */,
@@ -393,6 +402,8 @@
 			children = (
 				84D93AA91D15C2D000F282AB /* ViewController.h */,
 				84D93AAA1D15C2D000F282AB /* ViewController.m */,
+				8497A0CD1D64C8A100D7DCE8 /* RechargeVC.h */,
+				8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -465,6 +476,7 @@
 				84F0291B1D04752300F1CCD0 /* Assets.xcassets */,
 				84F0291D1D04752300F1CCD0 /* LaunchScreen.storyboard */,
 				84F029201D04752300F1CCD0 /* Info.plist */,
+				84DA123F1D657D3F005E952B /* Images.xcassets */,
 				84F0290F1D04752300F1CCD0 /* Supporting Files */,
 			);
 			path = shop;
@@ -613,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84F0291F1D04752300F1CCD0 /* LaunchScreen.storyboard in Resources */,
+				84DA12401D657D3F005E952B /* Images.xcassets in Resources */,
 				84F0291C1D04752300F1CCD0 /* Assets.xcassets in Resources */,
 				84F6E50A1D37651800E399D0 /* appIcon@3x.png in Resources */,
 				84F0291A1D04752300F1CCD0 /* Main.storyboard in Resources */,
@@ -704,6 +717,7 @@
 				84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */,
 				844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */,
 				84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */,
+				8497A0CF1D64C8A100D7DCE8 /* RechargeVC.m in Sources */,
 				84F029111D04752300F1CCD0 /* main.m in Sources */,
 				84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */,
 				8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */,
@@ -857,8 +871,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -879,7 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
+				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -893,8 +907,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -915,7 +929,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
+				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 			};
 			name = Release;
