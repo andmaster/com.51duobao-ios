@@ -8,24 +8,38 @@
 
 #import "UIWebView+JavaScriptAlert.h"
 
+typedef NS_ENUM(NSInteger,JSDialogType) {
+    JSAlertDialogType = 0,
+    JSConfirmDialogType,
+};
+
 @implementation UIWebView (JavaScriptAlert)
 
 static BOOL diagStat = NO;
 
 -(void)webView:(UIWebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(id)frame{
     
-    UIAlertView* dialogue = [[UIAlertView alloc]initWithTitle:nil message:message delegate:nil cancelButtonTitle:@"好" otherButtonTitles:nil, nil];
+    UIAlertView* dialogue = [[UIAlertView alloc]initWithTitle:nil message:message delegate:self cancelButtonTitle:@"好的" otherButtonTitles:nil, nil];
     
-    [dialogue show];;
+    dialogue.tag = JSAlertDialogType;
+    
+    [dialogue show];
 }
+
+static NSInteger bIdx = -1;
 
 -(BOOL)webView:(UIWebView *)sender runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(id)frame{
     
-    UIAlertView* dialogue = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:NSLocalizedString(@"ok", @"Ok") otherButtonTitles:NSLocalizedString(@"Cancel", @"Cancel"), nil];
+    BOOL isContainString = [(message?:@"") containsString:@"宝石不足"];
+    
+    //NSLocalizedString(@"ok", @"Ok")
+    UIAlertView* dialogue = [[UIAlertView alloc] initWithTitle:nil message:message delegate:self cancelButtonTitle:@"取消" otherButtonTitles:isContainString?@"去充值":@"确定", nil];
+    
+    dialogue.tag = JSConfirmDialogType;
     
     [dialogue show];
     
-    while (dialogue.hidden==NO && dialogue.superview!=nil) {
+    while ([dialogue isVisible]) {
         
         [[NSRunLoop mainRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.01f]];
     }
@@ -35,13 +49,39 @@ static BOOL diagStat = NO;
 
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     
-    if (buttonIndex==0) {
-        
-        diagStat=YES;
-        
-    }else if(buttonIndex==1){
-        
-        diagStat=NO;
+    switch (alertView.tag) {
+        case JSAlertDialogType:{
+            
+            if (buttonIndex == 0) {
+                
+                NSLog(@"取消");
+            }
+            else if (buttonIndex == 1) {
+                
+                NSLog(@"确定");
+            }
+        }
+            break;
+            
+        case JSConfirmDialogType:{
+            
+            bIdx = buttonIndex;
+            
+            if (buttonIndex == 0) {
+                
+                diagStat = NO;
+                
+            }
+            else if(buttonIndex==1){
+                
+                diagStat = YES;
+            }
+            NSLog(@"isVisible:%@:",@([alertView isVisible]));
+        }
+            break;
+
+        default:
+            break;
     }
 }
 

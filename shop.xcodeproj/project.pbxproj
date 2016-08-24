@@ -13,7 +13,6 @@
 		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
 		8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */; };
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
-		8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */; };
 		8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */; };
 		8497A0CC1D64C71500D7DCE8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */; };
 		8497A0CF1D64C8A100D7DCE8 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */; };
@@ -37,6 +36,7 @@
 		84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D93AAA1D15C2D000F282AB /* ViewController.m */; };
 		84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D93AAD1D15C43400F282AB /* BridgeController.m */; };
 		84DA12401D657D3F005E952B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DA123F1D657D3F005E952B /* Images.xcassets */; };
+		84DF28641D6C059D001019F4 /* UIWebView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DF28631D6C059D001019F4 /* UIWebView+Tools.m */; };
 		84E3190D1D11B1720094F1FE /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3190C1D11B1720094F1FE /* NSString+MD5.m */; };
 		84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397821D13C5B20023A882 /* WXApiRequestHandler.m */; };
 		84E397861D13C5DD0023A882 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397851D13C5DD0023A882 /* WXApiResponseHandler.m */; };
@@ -88,8 +88,6 @@
 		8487C75E1D0D8BD5004B8F6C /* BaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
 		8487C75F1D0D8BD5004B8F6C /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8487C7601D0D8BD5004B8F6C /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		8487C7641D0D8BD5004B8F6C /* UIWebView+BlackColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+BlackColor.h"; sourceTree = "<group>"; };
-		8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+BlackColor.m"; sourceTree = "<group>"; };
 		8487C76E1D0DC90F004B8F6C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8487C76F1D0DDF3F004B8F6C /* UINavigationController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Custom.h"; sourceTree = "<group>"; };
 		8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Custom.m"; sourceTree = "<group>"; };
@@ -127,6 +125,8 @@
 		84D93AAC1D15C43400F282AB /* BridgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeController.h; sourceTree = "<group>"; };
 		84D93AAD1D15C43400F282AB /* BridgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeController.m; sourceTree = "<group>"; };
 		84DA123F1D657D3F005E952B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84DF28621D6C059D001019F4 /* UIWebView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Tools.h"; sourceTree = "<group>"; };
+		84DF28631D6C059D001019F4 /* UIWebView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Tools.m"; sourceTree = "<group>"; };
 		84E3190B1D11B1720094F1FE /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		84E3190C1D11B1720094F1FE /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		84E397811D13C5B20023A882 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -239,12 +239,12 @@
 			children = (
 				84E3190B1D11B1720094F1FE /* NSString+MD5.h */,
 				84E3190C1D11B1720094F1FE /* NSString+MD5.m */,
-				8487C7641D0D8BD5004B8F6C /* UIWebView+BlackColor.h */,
-				8487C7651D0D8BD5004B8F6C /* UIWebView+BlackColor.m */,
 				8487C76F1D0DDF3F004B8F6C /* UINavigationController+Custom.h */,
 				8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */,
 				844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */,
 				844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */,
+				84DF28621D6C059D001019F4 /* UIWebView+Tools.h */,
+				84DF28631D6C059D001019F4 /* UIWebView+Tools.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -710,7 +710,6 @@
 				84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */,
 				840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */,
 				84E3979F1D13E9B10023A882 /* HttpRequest.m in Sources */,
-				8487C76C1D0D8BD5004B8F6C /* UIWebView+BlackColor.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
 				84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */,
@@ -719,6 +718,7 @@
 				84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */,
 				8497A0CF1D64C8A100D7DCE8 /* RechargeVC.m in Sources */,
 				84F029111D04752300F1CCD0 /* main.m in Sources */,
+				84DF28641D6C059D001019F4 /* UIWebView+Tools.m in Sources */,
 				84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */,
 				8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */,
 				8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */,
@@ -871,8 +871,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -893,7 +893,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -907,8 +907,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -929,7 +929,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "6bef19f3-72a6-4682-b10a-a916492d97fe";
+				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 			};
 			name = Release;

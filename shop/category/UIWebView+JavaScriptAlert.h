@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIWebView (JavaScriptAlert)
+@interface UIWebView (JavaScriptAlert)<UIAlertViewDelegate>
 
 @end

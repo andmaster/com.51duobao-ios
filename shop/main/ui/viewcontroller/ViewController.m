@@ -10,7 +10,7 @@
 #import "NJKWebViewProgressView.h"
 #import "NJKWebViewProgress.h"
 #import "WebViewJavascriptBridge.h"
-#import "UIWebView+BlackColor.h"
+#import "UIWebView+Tools.h"
 #import "BridgeController.h"
 #import "URLSetUtil.h"
 
@@ -49,9 +49,7 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    NSURLRequest* URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:HOST]];
-    
-    [self.webView loadRequest:URLRequest];
+    [self singleLoad];
     
     //[self registerProgressProxy];
     
@@ -59,9 +57,27 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    
     [super viewDidAppear:animated];
     
+}
+
+-(void)singleLoad{
+    
+    static NSURLRequest* URLRequest;
+    
+    static dispatch_once_t once;
+    
+    if (URLRequest != nil) {
+        
+        [self.webView reload];
+    }
+    
+    dispatch_once(&once, ^{
+       
+        URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:HOST]];
+        
+        [self.webView loadRequest:URLRequest];
+    });
 }
 
 /* 加载URL精度条 */
@@ -122,6 +138,10 @@
     NSString* URLString = webView.request.URL.absoluteString;
     
     self.navigationItem.leftBarButtonItem = [[URLSetUtil share].URLSet containsObject:URLString] ? nil : self.backBarButtonItem;
+    
+    BOOL isSearchURL = [[HOST stringByAppendingString:SEARCH] compare:URLString] == NSOrderedSame;
+    
+    self.navigationItem.rightBarButtonItem = isSearchURL ? nil : self.rightBarButtonItem;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(nullable NSError *)error{
@@ -134,7 +154,7 @@
 /* 加载网页上的title */
 - (void)loadingTitle{
     
-    self.title = [self.webView stringByEvaluatingJavaScriptFromString:@"document.title"];
+    self.navigationItem.title = [self.webView titleString];
 }
 
 #pragma mark -- NJKWebViewProgressDelegate --
@@ -197,62 +217,83 @@
 }
 
 -(WebViewJavascriptBridge *)bridge{
+    
     if (_bridge == nil) {
+        
         _bridge = [WebViewJavascriptBridge bridgeForWebView:self.webView];
+        
         [_bridge setWebViewDelegate:self];
     }
     return _bridge;
 }
 
 -(NJKWebViewProgressView *)webViewProgressView{
+    
     if (_webViewProgressView == nil) {
+    
         CGRect bounds = self.navigationController.navigationBar.bounds;
+        
         CGRect frame = CGRectMake(0, bounds.size.height - 2, bounds.size.width, 2);
+        
         _webViewProgressView = [[NJKWebViewProgressView alloc] initWithFrame:frame];
+        
         _webViewProgressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        
         [_webViewProgressView setProgress:0 animated:YES];
     }
     return _webViewProgressView;
 }
 
 -(NJKWebViewProgress *)progressProxy{
+    
     if (_progressProxy == nil) {
+    
         _progressProxy = [[NJKWebViewProgress alloc] init];
     }
     return _progressProxy;
 }
 
 - (NSMutableArray *)cachaUrl{
+    
     if (_cachaUrl == nil) {
+    
         _cachaUrl = [NSMutableArray array];
+        
         [_cachaUrl addObject:HOST];
     }
     return _cachaUrl;
 }
 
 -(CGFloat)width{
+   
     if (_width == 0) {
+    
         _width = self.mainFrame.size.width;
     }
     return _width;
 }
 
 -(CGFloat)height{
+    
     if (_height == 0) {
+        
         _height = self.mainFrame.size.height;
     }
     return _height;
 }
 
 -(CGRect)mainFrame{
+    
     return [[UIScreen mainScreen] bounds];
 }
 
 -(CGRect)statusFrame{
+    
     return [[UIApplication sharedApplication] statusBarFrame];
 }
 
 -(void)dealloc{
+    
     _cachaUrl = nil;
 }
 
