@@ -119,14 +119,14 @@
     
     NSLog(@"-----------收到产品反馈信息--------------");
     
-    NSArray *myProduct = response.products;
+    NSArray *products = response.products;
     
     NSLog(@"产品Product ID:%@",response.invalidProductIdentifiers);
     
-    NSLog(@"产品付费数量: %d", (int)[myProduct count]);
+    NSLog(@"产品付费数量: %d", (int)[products count]);
     
     // populate UI
-    for(SKProduct *product in myProduct){
+    /*for(SKProduct * product in products){
         
         Log(@"product info");
         
@@ -139,27 +139,27 @@
         Log(@"价格: %@" , product.price);
         
         Log(@"Product id: %@" , product.productIdentifier);
-    }
+    }*/
     
     SKPayment *payment = nil;
     
     switch (buyType) {
             
         case IAP0p20:
-            payment  = [SKPayment paymentWithProductIdentifier:@"com.ddyyyg.shop1126308815"/*ProductID_IAP0p20*/];    //支付25
+            //payment  = [SKPayment paymentWithProductIdentifier:@"com.ddyyyg.shop1126308815"/*ProductID_IAP0p20*/];    //支付25
             //[SKPayment paymentWithProduct:<#(nonnull SKProduct *)#>]
             break;
         case IAP1p100:
-            payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP1p100];    //支付108
+           //payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP1p100];    //支付108
             break;
         case IAP4p600:
-            payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP4p600];    //支付618
+            //payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP4p600];    //支付618
             break;
         case IAP9p1000:
-            payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP9p1000];    //支付1048
+            //payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP9p1000];    //支付1048
             break;
         case IAP24p6000:
-            payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP24p6000];    //支付5898
+            //payment  = [SKPayment paymentWithProductIdentifier:ProductID_IAP24p6000];    //支付5898
             break;
         default:
             break;

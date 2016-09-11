@@ -27,26 +27,30 @@
     //向微信注册
     [WXApi registerApp:APP_ID_WX withDescription:@"丁丁云购 1.0"];
     
-    ViewController* rootViewController = [[ViewController alloc] init];
+    UINavigationController* rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
     
-    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
-    
-    self.window.rootViewController = navController;
+    self.window.rootViewController = rootViewController;
     
     [self.window makeKeyAndVisible];
     
-    //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(removeLun) userInfo:nil repeats:NO];
+    //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(removeLun:) userInfo:nil repeats:NO];
     
-    [NSThread sleepForTimeInterval:3];
+    [NSThread sleepForTimeInterval:1.0f];
     
     return YES;
 }
 
+- (void)removeLun:(NSTimer*)sender{
+    
+}
+
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    
     return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
     return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
 }
 

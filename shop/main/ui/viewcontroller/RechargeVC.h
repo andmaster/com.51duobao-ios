@@ -9,13 +9,13 @@
 #import "BaseViewController.h"
 #import <StoreKit/StoreKit.h>
 
-enum{
+typedef NS_ENUM(NSInteger,buyCoinsTag) {
     IAP0p20=20,
     IAP1p100,
     IAP4p600,
     IAP9p1000,
     IAP24p6000,
-}buyCoinsTag;
+};
 
 @interface RechargeVC : BaseViewController<SKPaymentTransactionObserver,SKProductsRequestDelegate>{
     
