@@ -29,13 +29,13 @@
 		84B0A3801D12AB3200215200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A37F1D12AB3200215200 /* Foundation.framework */; };
 		84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0A3891D12B59500215200 /* WXApiManager.m */; };
 		84BCAA101D2021B1003341AD /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BCAA0F1D2021B1003341AD /* UserDefault.m */; };
-		84C7B15D1D23FB470028B09D /* libSign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C7B15C1D23FB470028B09D /* libSign.a */; };
 		84D1D2D91D19108300F47C44 /* XMLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D2D81D19108300F47C44 /* XMLUtil.m */; };
 		84D1D2DC1D1910B700F47C44 /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D2DB1D1910B700F47C44 /* PayModel.m */; };
 		84D93AA41D15B92E00F282AB /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D93AA31D15B92E00F282AB /* libxml2.2.tbd */; };
 		84D93AAB1D15C2D000F282AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D93AAA1D15C2D000F282AB /* ViewController.m */; };
 		84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D93AAD1D15C43400F282AB /* BridgeController.m */; };
 		84DA12401D657D3F005E952B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DA123F1D657D3F005E952B /* Images.xcassets */; };
+		84DC307F1D864C5C0074735E /* libSign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84DC307E1D864C5C0074735E /* libSign.a */; };
 		84DF28641D6C059D001019F4 /* UIWebView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DF28631D6C059D001019F4 /* UIWebView+Tools.m */; };
 		84E3190D1D11B1720094F1FE /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3190C1D11B1720094F1FE /* NSString+MD5.m */; };
 		84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397821D13C5B20023A882 /* WXApiRequestHandler.m */; };
@@ -113,7 +113,6 @@
 		84B0A3891D12B59500215200 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		84BCAA0E1D2021B1003341AD /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
 		84BCAA0F1D2021B1003341AD /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
-		84C7B15C1D23FB470028B09D /* libSign.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSign.a; sourceTree = "<group>"; };
 		84C7B15E1D23FB5E0028B09D /* Sign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
 		84D1D2D71D19108300F47C44 /* XMLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLUtil.h; sourceTree = "<group>"; };
 		84D1D2D81D19108300F47C44 /* XMLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLUtil.m; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		84D93AAC1D15C43400F282AB /* BridgeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeController.h; sourceTree = "<group>"; };
 		84D93AAD1D15C43400F282AB /* BridgeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeController.m; sourceTree = "<group>"; };
 		84DA123F1D657D3F005E952B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		84DC307E1D864C5C0074735E /* libSign.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSign.a; sourceTree = "<group>"; };
 		84DF28621D6C059D001019F4 /* UIWebView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+Tools.h"; sourceTree = "<group>"; };
 		84DF28631D6C059D001019F4 /* UIWebView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+Tools.m"; sourceTree = "<group>"; };
 		84E3190B1D11B1720094F1FE /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
@@ -145,10 +145,10 @@
 		84F0291B1D04752300F1CCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84F0291E1D04752300F1CCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84F029201D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84F029251D04752300F1CCD0 /* shop.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shop.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F029251D04752300F1CCD0 /* 51indiana.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 51indiana.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F029291D04752300F1CCD0 /* shopTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopTests.m; sourceTree = "<group>"; };
 		84F0292B1D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84F029301D04752300F1CCD0 /* shop.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shop.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F029301D04752300F1CCD0 /* 51indiana.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 51indiana.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F029341D04752300F1CCD0 /* shopUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = shopUITests.m; sourceTree = "<group>"; };
 		84F029361D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3A2451D274DF700A71328 /* SendAuthReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendAuthReq+Request.h"; sourceTree = "<group>"; };
@@ -170,9 +170,9 @@
 				84B0A37E1D12AAE300215200 /* UIKit.framework in Frameworks */,
 				84B0A37C1D12AAB200215200 /* CoreTelephony.framework in Frameworks */,
 				84B0A37A1D12A80500215200 /* libc++.1.tbd in Frameworks */,
+				84DC307F1D864C5C0074735E /* libSign.a in Frameworks */,
 				84B0A3781D12A7D400215200 /* libz.1.1.3.tbd in Frameworks */,
 				84B0A3761D12A7AE00215200 /* libsqlite3.0.tbd in Frameworks */,
-				84C7B15D1D23FB470028B09D /* libSign.a in Frameworks */,
 				84B0A3741D12A75600215200 /* SystemConfiguration.framework in Frameworks */,
 				84B0A3711D12A61F00215200 /* libWeChatSDK.a in Frameworks */,
 				B71D2260B05B8345045A98BE /* libPods.a in Frameworks */,
@@ -320,7 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				84C7B15E1D23FB5E0028B09D /* Sign.h */,
-				84C7B15C1D23FB470028B09D /* libSign.a */,
+				84DC307E1D864C5C0074735E /* libSign.a */,
 				84B0A36C1D12A61F00215200 /* libWeChatSDK.a */,
 				84B0A36E1D12A61F00215200 /* WechatAuthSDK.h */,
 				84B0A36F1D12A61F00215200 /* WXApi.h */,
@@ -452,8 +452,8 @@
 			isa = PBXGroup;
 			children = (
 				84F0290C1D04752300F1CCD0 /* 丁丁云购.app */,
-				84F029251D04752300F1CCD0 /* shop.xctest */,
-				84F029301D04752300F1CCD0 /* shop.xctest */,
+				84F029251D04752300F1CCD0 /* 51indiana.xctest */,
+				84F029301D04752300F1CCD0 /* 51indiana.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -520,9 +520,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84F0290B1D04752300F1CCD0 /* shop */ = {
+		84F0290B1D04752300F1CCD0 /* 51indiana */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84F029391D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "shop" */;
+			buildConfigurationList = 84F029391D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indiana" */;
 			buildPhases = (
 				294EDBEEF6CF198DCE8E648C /* Check Pods Manifest.lock */,
 				84F029081D04752300F1CCD0 /* Sources */,
@@ -535,14 +535,14 @@
 			);
 			dependencies = (
 			);
-			name = shop;
+			name = 51indiana;
 			productName = shop;
 			productReference = 84F0290C1D04752300F1CCD0 /* 丁丁云购.app */;
 			productType = "com.apple.product-type.application";
 		};
-		84F029241D04752300F1CCD0 /* shopTests */ = {
+		84F029241D04752300F1CCD0 /* 51indianaTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84F0293C1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "shopTests" */;
+			buildConfigurationList = 84F0293C1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indianaTests" */;
 			buildPhases = (
 				84F029211D04752300F1CCD0 /* Sources */,
 				84F029221D04752300F1CCD0 /* Frameworks */,
@@ -553,14 +553,14 @@
 			dependencies = (
 				84F029271D04752300F1CCD0 /* PBXTargetDependency */,
 			);
-			name = shopTests;
+			name = 51indianaTests;
 			productName = shopTests;
-			productReference = 84F029251D04752300F1CCD0 /* shop.xctest */;
+			productReference = 84F029251D04752300F1CCD0 /* 51indiana.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		84F0292F1D04752300F1CCD0 /* shopUITests */ = {
+		84F0292F1D04752300F1CCD0 /* 51indianaUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84F0293F1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "shopUITests" */;
+			buildConfigurationList = 84F0293F1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indianaUITests" */;
 			buildPhases = (
 				84F0292C1D04752300F1CCD0 /* Sources */,
 				84F0292D1D04752300F1CCD0 /* Frameworks */,
@@ -571,9 +571,9 @@
 			dependencies = (
 				84F029321D04752300F1CCD0 /* PBXTargetDependency */,
 			);
-			name = shopUITests;
+			name = 51indianaUITests;
 			productName = shopUITests;
-			productReference = 84F029301D04752300F1CCD0 /* shop.xctest */;
+			productReference = 84F029301D04752300F1CCD0 /* 51indiana.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -599,7 +599,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 84F029071D04752300F1CCD0 /* Build configuration list for PBXProject "shop" */;
+			buildConfigurationList = 84F029071D04752300F1CCD0 /* Build configuration list for PBXProject "51indiana" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -612,9 +612,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84F0290B1D04752300F1CCD0 /* shop */,
-				84F029241D04752300F1CCD0 /* shopTests */,
-				84F0292F1D04752300F1CCD0 /* shopUITests */,
+				84F0290B1D04752300F1CCD0 /* 51indiana */,
+				84F029241D04752300F1CCD0 /* 51indianaTests */,
+				84F0292F1D04752300F1CCD0 /* 51indianaUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -751,12 +751,12 @@
 /* Begin PBXTargetDependency section */
 		84F029271D04752300F1CCD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84F0290B1D04752300F1CCD0 /* shop */;
+			target = 84F0290B1D04752300F1CCD0 /* 51indiana */;
 			targetProxy = 84F029261D04752300F1CCD0 /* PBXContainerItemProxy */;
 		};
 		84F029321D04752300F1CCD0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 84F0290B1D04752300F1CCD0 /* shop */;
+			target = 84F0290B1D04752300F1CCD0 /* 51indiana */;
 			targetProxy = 84F029311D04752300F1CCD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -871,8 +871,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -890,10 +890,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/shop/sdk/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
+				PROVISIONING_PROFILE = "df38e6d7-7047-4c85-90c0-2ea64f18af73";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -907,8 +907,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -926,10 +926,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/shop/sdk/Wechat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyyg.shop;
+				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "d9e0a6e5-8f02-427e-9ce6-01d6e4b41244";
+				PROVISIONING_PROFILE = "df38e6d7-7047-4c85-90c0-2ea64f18af73";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 			};
 			name = Release;
@@ -941,8 +941,8 @@
 				INFOPLIST_FILE = shopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyg.shopTests;
-				PRODUCT_NAME = shop;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shop.app/shop";
+				PRODUCT_NAME = 51indiana;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/51indiana.app/51indiana";
 			};
 			name = Debug;
 		};
@@ -953,8 +953,8 @@
 				INFOPLIST_FILE = shopTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyg.shopTests;
-				PRODUCT_NAME = shop;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shop.app/shop";
+				PRODUCT_NAME = 51indiana;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/51indiana.app/51indiana";
 			};
 			name = Release;
 		};
@@ -964,7 +964,7 @@
 				INFOPLIST_FILE = shopUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyg.shopUITests;
-				PRODUCT_NAME = shop;
+				PRODUCT_NAME = 51indiana;
 				TEST_TARGET_NAME = shop;
 			};
 			name = Debug;
@@ -975,7 +975,7 @@
 				INFOPLIST_FILE = shopUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddyyg.shopUITests;
-				PRODUCT_NAME = shop;
+				PRODUCT_NAME = 51indiana;
 				TEST_TARGET_NAME = shop;
 			};
 			name = Release;
@@ -983,7 +983,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84F029071D04752300F1CCD0 /* Build configuration list for PBXProject "shop" */ = {
+		84F029071D04752300F1CCD0 /* Build configuration list for PBXProject "51indiana" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F029371D04752300F1CCD0 /* Debug */,
@@ -992,7 +992,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84F029391D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "shop" */ = {
+		84F029391D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indiana" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F0293A1D04752300F1CCD0 /* Debug */,
@@ -1001,7 +1001,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84F0293C1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "shopTests" */ = {
+		84F0293C1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indianaTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F0293D1D04752300F1CCD0 /* Debug */,
@@ -1010,7 +1010,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84F0293F1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "shopUITests" */ = {
+		84F0293F1D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indianaUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84F029401D04752300F1CCD0 /* Debug */,

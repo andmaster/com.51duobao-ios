@@ -11,7 +11,7 @@
 
 #pragma mark -- URL --
 
-static NSString* const HOST = @"http://app.dd1yyg.com";
+static NSString* const HOST = @"http://db5151.bdchenmei.cn";
 
 static NSString* const MOBILE = @"/?/mobile/mobile"; //主页
 
@@ -28,11 +28,11 @@ static NSString* const HOME = @"/?/mobile/home";//主页
 static NSString* const SEARCH = @"/?/mobile/mobile/search1";//搜索
 
 //**是 APP_ID 替换为你的应用从官方网站申请到的合法appId
-static NSString* const APP_ID_WX = @"wx6a6dabef860d5157";
+static NSString* const APP_ID_WX = @"wxbdeb1cfe97a2faaf";
 //**是 appSectet
-static NSString* const APP_SECTET_WX = @"e61df9cfd301d1ae6bc662591932d170";
+static NSString* const APP_SECTET_WX = @"863f7c87ddbbfaceb29a8588fd65b499";
 //**是 mch_id 商户号
-static NSString* const MCH_ID_WX = @"1356293102";
+static NSString* const MCH_ID_WX = @"1388650102";
 //**是 交易类型
 static NSString* const TRADE_TYPE_WX = @"APP";
 //**是 扩展字段
