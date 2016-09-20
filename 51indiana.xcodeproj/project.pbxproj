@@ -16,8 +16,6 @@
 		8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */; };
 		8497A0CC1D64C71500D7DCE8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */; };
 		8497A0CF1D64C8A100D7DCE8 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */; };
-		84A7B4331D06CFFC001802B5 /* back-arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */; };
-		84A7B4341D06CFFC001802B5 /* back-arrow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */; };
 		84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA39891D184FB1001F12ED /* HttpViewController.swift */; };
 		84B0A3711D12A61F00215200 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A36C1D12A61F00215200 /* libWeChatSDK.a */; };
 		84B0A3741D12A75600215200 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A3731D12A75600215200 /* SystemConfiguration.framework */; };
@@ -50,8 +48,6 @@
 		84F0292A1D04752300F1CCD0 /* shopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029291D04752300F1CCD0 /* shopTests.m */; };
 		84F029351D04752300F1CCD0 /* shopUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029341D04752300F1CCD0 /* shopUITests.m */; };
 		84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */; };
-		84F6E5081D37650F00E399D0 /* appIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6E5071D37650F00E399D0 /* appIcon@2x.png */; };
-		84F6E50A1D37651800E399D0 /* appIcon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F6E5091D37651800E399D0 /* appIcon@3x.png */; };
 		B71D2260B05B8345045A98BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B76F05A019A89545238D47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -94,8 +90,6 @@
 		8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8497A0CD1D64C8A100D7DCE8 /* RechargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
 		8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
-		84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow@2x.png"; sourceTree = "<group>"; };
-		84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-arrow@3x.png"; sourceTree = "<group>"; };
 		84AA39891D184FB1001F12ED /* HttpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpViewController.swift; sourceTree = "<group>"; };
 		84AA398C1D18512F001F12ED /* shop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "shop-Bridging-Header.h"; sourceTree = "<group>"; };
 		84B0A36C1D12A61F00215200 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
@@ -153,8 +147,6 @@
 		84F029361D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3A2451D274DF700A71328 /* SendAuthReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendAuthReq+Request.h"; sourceTree = "<group>"; };
 		84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendAuthReq+Request.m"; sourceTree = "<group>"; };
-		84F6E5071D37650F00E399D0 /* appIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@2x.png"; sourceTree = "<group>"; };
-		84F6E5091D37651800E399D0 /* appIcon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon@3x.png"; sourceTree = "<group>"; };
 		A8B76F05A019A89545238D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,33 +263,6 @@
 			children = (
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		84A7B42E1D06CFFC001802B5 /* res */ = {
-			isa = PBXGroup;
-			children = (
-				84A7B42F1D06CFFC001802B5 /* @2x */,
-				84A7B4311D06CFFC001802B5 /* @3x */,
-			);
-			path = res;
-			sourceTree = "<group>";
-		};
-		84A7B42F1D06CFFC001802B5 /* @2x */ = {
-			isa = PBXGroup;
-			children = (
-				84F6E5071D37650F00E399D0 /* appIcon@2x.png */,
-				84A7B4301D06CFFC001802B5 /* back-arrow@2x.png */,
-			);
-			path = "@2x";
-			sourceTree = "<group>";
-		};
-		84A7B4311D06CFFC001802B5 /* @3x */ = {
-			isa = PBXGroup;
-			children = (
-				84F6E5091D37651800E399D0 /* appIcon@3x.png */,
-				84A7B4321D06CFFC001802B5 /* back-arrow@3x.png */,
-			);
-			path = "@3x";
 			sourceTree = "<group>";
 		};
 		84AA398B1D185114001F12ED /* bridge */ = {
@@ -471,7 +436,6 @@
 				8487C7631D0D8BD5004B8F6C /* category */,
 				8487C7661D0D8BD5004B8F6C /* main */,
 				84F029181D04752300F1CCD0 /* Main.storyboard */,
-				84A7B42E1D06CFFC001802B5 /* res */,
 				84B0A3691D12A36E00215200 /* sdk */,
 				84F0291B1D04752300F1CCD0 /* Assets.xcassets */,
 				84F0291D1D04752300F1CCD0 /* LaunchScreen.storyboard */,
@@ -588,6 +552,7 @@
 					84F0290B1D04752300F1CCD0 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = QJNCKRFW6Z;
+						LastSwiftMigration = 0800;
 					};
 					84F029241D04752300F1CCD0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -627,11 +592,7 @@
 				84F0291F1D04752300F1CCD0 /* LaunchScreen.storyboard in Resources */,
 				84DA12401D657D3F005E952B /* Images.xcassets in Resources */,
 				84F0291C1D04752300F1CCD0 /* Assets.xcassets in Resources */,
-				84F6E50A1D37651800E399D0 /* appIcon@3x.png in Resources */,
 				84F0291A1D04752300F1CCD0 /* Main.storyboard in Resources */,
-				84F6E5081D37650F00E399D0 /* appIcon@2x.png in Resources */,
-				84A7B4341D06CFFC001802B5 /* back-arrow@3x.png in Resources */,
-				84A7B4331D06CFFC001802B5 /* back-arrow@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +857,7 @@
 				PROVISIONING_PROFILE = "df38e6d7-7047-4c85-90c0-2ea64f18af73";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -931,6 +893,7 @@
 				PRODUCT_NAME = "丁丁云购";
 				PROVISIONING_PROFILE = "df38e6d7-7047-4c85-90c0-2ea64f18af73";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
