@@ -133,7 +133,7 @@
 		84E397A41D13FF820023A882 /* PayReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayReq+Request.h"; sourceTree = "<group>"; };
 		84E397A51D13FF820023A882 /* PayReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PayReq+Request.m"; sourceTree = "<group>"; };
 		84E3F9DB1D1875B4009189DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		84F0290C1D04752300F1CCD0 /* 丁丁云购.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "丁丁云购.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F0290C1D04752300F1CCD0 /* 51夺宝.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51夺宝.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F029101D04752300F1CCD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F029191D04752300F1CCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F0291B1D04752300F1CCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -416,7 +416,7 @@
 		84F0290D1D04752300F1CCD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84F0290C1D04752300F1CCD0 /* 丁丁云购.app */,
+				84F0290C1D04752300F1CCD0 /* 51夺宝.app */,
 				84F029251D04752300F1CCD0 /* 51indiana.xctest */,
 				84F029301D04752300F1CCD0 /* 51indiana.xctest */,
 			);
@@ -501,7 +501,7 @@
 			);
 			name = 51indiana;
 			productName = shop;
-			productReference = 84F0290C1D04752300F1CCD0 /* 丁丁云购.app */;
+			productReference = 84F0290C1D04752300F1CCD0 /* 51夺宝.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84F029241D04752300F1CCD0 /* 51indianaTests */ = {
@@ -553,6 +553,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = QJNCKRFW6Z;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					84F029241D04752300F1CCD0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -833,7 +834,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -853,8 +855,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
-				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "df38e6d7-7047-4c85-90c0-2ea64f18af73";
+				PRODUCT_NAME = "51夺宝";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -870,7 +873,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ju yuan (GP23LSVS82)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -890,8 +894,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
-				PRODUCT_NAME = "丁丁云购";
-				PROVISIONING_PROFILE = "df38e6d7-7047-4c85-90c0-2ea64f18af73";
+				PRODUCT_NAME = "51夺宝";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
