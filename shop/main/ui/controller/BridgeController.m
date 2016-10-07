@@ -54,6 +54,24 @@
         
         if (data == nil) { return ; }
         
+        if (![WXApi isWXAppInstalled]) {//TODO
+            
+            NSURL * URL = [(ViewController*)viewController webView].request.URL;
+            
+            if ([[UIApplication sharedApplication] canOpenURL:URL]) {
+                
+                NSLog(@"URL-->%@",[URL description]);
+                
+                [[UIApplication sharedApplication] openURL:URL]; return;
+            }
+            
+            /*if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:OPEN_WX_TYPE]]) {
+                
+                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:OPEN_WX_TYPE]]; 
+            }*/
+            return;
+        }
+        
         if ([data isKindOfClass:[NSString class]]) {
             
             NSArray* params = [((NSString*)data) componentsSeparatedByString:@"#"];
@@ -82,6 +100,7 @@
         //responseCallback(data);//回调数据的block方法
     }];
     
+    //微信登录
     [bridge registerHandler:LoginByWx handler:^(id data, WVJBResponseCallback responseCallback) {
         
         [weakSelf sendWxAuth];//微信登录

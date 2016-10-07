@@ -27,6 +27,8 @@ static NSString* const HOME = @"/?/mobile/home";//主页
 
 static NSString* const SEARCH = @"/?/mobile/mobile/search1";//搜索
 
+//打开微信
+static NSString * const OPEN_WX_TYPE = @"wxbdeb1cfe97a2faaf://";
 //**是 APP_ID 替换为你的应用从官方网站申请到的合法appId
 static NSString* const APP_ID_WX = @"wxbdeb1cfe97a2faaf";
 //**是 appSectet

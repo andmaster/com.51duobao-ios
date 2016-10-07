@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "BaseAPI.h"
 #import "ViewController.h"
+#import "LaunchViewController.h"
 #import "Constants.h"
+#import "UserDefault.h"
 
 #import "WXApi.h"
 #import "WXApiManager.h"
@@ -20,6 +22,30 @@
 
 @implementation AppDelegate
 
+- (void)switchRootViewController{
+    
+    self.window.rootViewController = nil;
+    
+    BOOL isFirstLaunch = [[UserDefault share] isFirstLaunch];
+    
+    if (isFirstLaunch) {
+        
+        LaunchViewController * launchVC = [[LaunchViewController alloc] init];
+    
+        self.window.rootViewController  = launchVC;
+    }
+    else {
+    
+        UINavigationController* rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
+        
+        self.window.rootViewController = rootViewController;
+        
+        //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(removeLun:) userInfo:nil repeats:NO];
+    }
+    
+     [self.window makeKeyAndVisible];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -27,13 +53,7 @@
     //向微信注册
     [WXApi registerApp:APP_ID_WX withDescription:@"丁丁云购 1.0"];
     
-    UINavigationController* rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ViewController alloc] init]];
-    
-    self.window.rootViewController = rootViewController;
-    
-    [self.window makeKeyAndVisible];
-    
-    //[NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(removeLun:) userInfo:nil repeats:NO];
+    [self switchRootViewController];
     
     [NSThread sleepForTimeInterval:1.0f];
     

@@ -74,7 +74,7 @@
     
     dispatch_once(&once, ^{
        
-        URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:HOST]];
+        URLRequest = URLREQUEST(HOST);
         
         [self.webView loadRequest:URLRequest];
     });
@@ -104,16 +104,15 @@
 }
 
 #pragma mark -- self`s method --
-
 -(void)didRightBarItem:(UIBarButtonItem*)rightBarButtonItem{
     
     //[[BridgeController share] executUnifiedOrder:@{@"money":@"123"}];
     
     //[[BridgeController share] sendWxAuth];
     
-    NSString* URLString = [HOST stringByAppendingString:SEARCH];
+    NSString * URLString = [HOST stringByAppendingString:SEARCH];
     
-    NSURLRequest* URLRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]];
+    NSURLRequest* URLRequest = URLREQUEST(URLString);
     
     [self.webView loadRequest:URLRequest];
 }
@@ -172,9 +171,12 @@
     
     if (_backBarButtonItem == nil) {
         
-        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"back-arrow"] style:UIBarButtonItemStylePlain target:self action:@selector(didBackBarItem:)];
+        _backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:IMAGE(@"back-arrow")
+                                                              style:UIBarButtonItemStylePlain
+                                                             target:self
+                                                             action:@selector(didBackBarItem:)];
         
-       [_backBarButtonItem setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"back-arrow"]]];
+       [_backBarButtonItem setTintColor:[UIColor colorWithPatternImage:IMAGE(@"back-arrow")]];
     }
     
     return _backBarButtonItem;
@@ -184,9 +186,12 @@
     
     if (_rightBarButtonItem == nil) {
         
-         _rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search"] style:UIBarButtonItemStylePlain target:self action:@selector(didRightBarItem:)];
+         _rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:IMAGE(@"search")
+                                                                style:UIBarButtonItemStylePlain
+                                                               target:self
+                                                               action:@selector(didRightBarItem:)];
         
-        [_rightBarButtonItem setTintColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"search"]]];
+        [_rightBarButtonItem setTintColor:[UIColor colorWithPatternImage:IMAGE(@"search")]];
 
     }
     

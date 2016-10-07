@@ -12,15 +12,22 @@
 @implementation HttpRequest
 
 /*GET请求*/
-+(void)httpGet:(id)parameters URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type{
++(void)httpGet:(id)parameters
+     URLString:(NSString*)URLString
+      deletage:(id<HttpRequestDeletage>)deletage
+          type:(HttpTagType)type{
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     NSError* error;
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:URLString parameters:parameters error:&error];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET"
+                                                                                 URLString:URLString
+                                                                                parameters:parameters
+                                                                                     error:&error];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request
+                                                completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             if (deletage != nil && [deletage respondsToSelector:@selector(failedError:type:)]) {
                 [deletage failedError:error.description type:type];
@@ -35,15 +42,22 @@
 }
 
 /*POST请求*/
-+(void)httpPost:(id)parameters URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type{
++(void)httpPost:(id)parameters
+      URLString:(NSString*)URLString
+       deletage:(id<HttpRequestDeletage>)deletage
+           type:(HttpTagType)type{
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     NSError* error;
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:parameters error:&error];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST"
+                                                                                 URLString:URLString
+                                                                                parameters:parameters
+                                                                                     error:&error];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request
+                                                completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             if (deletage != nil && [deletage respondsToSelector:@selector(failedError:type:)]) {
                 [deletage failedError:error.description type:type];
@@ -58,20 +72,27 @@
 }
 
 /*POST请求*/
-+(void)httpPostEntity:(NSString*)entity URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type{
++(void)httpPostEntity:(NSString*)entity
+            URLString:(NSString*)URLString
+             deletage:(id<HttpRequestDeletage>)deletage
+                 type:(HttpTagType)type{
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     NSError* error;
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:nil error:&error];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST"
+                                                                                 URLString:URLString
+                                                                                parameters:nil
+                                                                                     error:&error];
     
     //create the body
     NSMutableData *postBody = [NSMutableData data];
     [postBody appendData:[[NSString stringWithFormat:@"%@",entity] dataUsingEncoding:NSUTF8StringEncoding]];
     [request setHTTPBody:postBody];
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request
+                                                completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             if (deletage != nil && [deletage respondsToSelector:@selector(failedError:type:)]) {
                 [deletage failedError:error.description type:type];
@@ -86,13 +107,18 @@
 }
 
 /*POST请求*/
-+(void)httpPostBody:(NSString*)body URLString:(NSString*)URLString deletage:(id<HttpRequestDeletage>)deletage type:(HttpTagType)type{
++(void)httpPostBody:(NSString*)body
+          URLString:(NSString*)URLString
+           deletage:(id<HttpRequestDeletage>)deletage
+               type:(HttpTagType)type{
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
     NSError* error;
-    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST" URLString:URLString parameters:nil error:&error];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"POST"
+                                                                                 URLString:URLString
+                                                                                parameters:nil error:&error];
     
     request.timeoutInterval = 1.5*60;
     
@@ -103,7 +129,8 @@
     
     manager.responseSerializer = [AFXMLParserResponseSerializer serializer];//解析xml
     
-    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
+    NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request
+                                                completionHandler:^(NSURLResponse *response, id responseObject, NSError *error) {
         if (error) {
             if (deletage != nil && [deletage respondsToSelector:@selector(failedError:type:)]) {
                 [deletage failedError:error.description type:type];
@@ -115,7 +142,6 @@
         }
     }];
     [dataTask resume];
-    
 }
 
 

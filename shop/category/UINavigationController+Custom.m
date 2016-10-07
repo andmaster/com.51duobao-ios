@@ -23,7 +23,8 @@
     
     //[self preferredStatusBarStyle];
     
-    [self.navigationBar setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,nil]];
+    [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],
+                                                 NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
 }
 
 @end

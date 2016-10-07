@@ -11,7 +11,7 @@
 
 @interface ViewController : BaseViewController<UIWebViewDelegate>
 
-@property(nonatomic, strong) UIWebView* webView;
+@property (nonatomic, strong) UIWebView * webView;
 
 @end
 

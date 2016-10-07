@@ -7,10 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		065CB9B2D4162215A44A996C /* libPods-51indiana.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CF6BCFCC6737439EF5FAC8 /* libPods-51indiana.a */; };
 		8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403747B1D1684DC009D7D64 /* OrderUtil.m */; };
 		8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8403747D1D168E6A009D7D64 /* IPAddress.c */; };
 		840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BADB01D4EDFC60073FABB /* URLSetUtil.m */; };
+		841BAEE01D9E6EB800F1AE99 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */; };
 		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
+		84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CA41DA748E90086B816 /* LaunchViewController.m */; };
+		84850CA91DA76F4E0086B816 /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CA81DA76F4E0086B816 /* ADView.m */; };
 		8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */; };
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
 		8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */; };
@@ -48,7 +52,6 @@
 		84F0292A1D04752300F1CCD0 /* shopTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029291D04752300F1CCD0 /* shopTests.m */; };
 		84F029351D04752300F1CCD0 /* shopUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029341D04752300F1CCD0 /* shopUITests.m */; };
 		84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */; };
-		B71D2260B05B8345045A98BE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A8B76F05A019A89545238D47 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,16 +72,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		094D0C1F03EB3F60DC9635A1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		56D39856BC9656AB63757910 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		75B14AC6C3730F267AEE4691 /* Pods-51indiana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51indiana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-51indiana/Pods-51indiana.debug.xcconfig"; sourceTree = "<group>"; };
 		8403747A1D1684DC009D7D64 /* OrderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderUtil.h; sourceTree = "<group>"; };
 		8403747B1D1684DC009D7D64 /* OrderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderUtil.m; sourceTree = "<group>"; };
 		8403747D1D168E6A009D7D64 /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
 		8403747E1D168E6A009D7D64 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
 		840BADAF1D4EDFC60073FABB /* URLSetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSetUtil.h; sourceTree = "<group>"; };
 		840BADB01D4EDFC60073FABB /* URLSetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSetUtil.m; sourceTree = "<group>"; };
+		841BAEDE1D9E6EB800F1AE99 /* UIColor+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extension.h"; sourceTree = "<group>"; };
+		841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extension.m"; sourceTree = "<group>"; };
 		844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JavaScriptAlert.h"; sourceTree = "<group>"; };
 		844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JavaScriptAlert.m"; sourceTree = "<group>"; };
+		8451E982F0F9B224B289E0F2 /* Pods-51indiana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51indiana.release.xcconfig"; path = "Pods/Target Support Files/Pods-51indiana/Pods-51indiana.release.xcconfig"; sourceTree = "<group>"; };
+		84850CA31DA748E90086B816 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		84850CA41DA748E90086B816 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		84850CA71DA76F4E0086B816 /* ADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
+		84850CA81DA76F4E0086B816 /* ADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADView.m; sourceTree = "<group>"; };
 		8487C75B1D0D8BD5004B8F6C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8487C75E1D0D8BD5004B8F6C /* BaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
@@ -133,7 +142,7 @@
 		84E397A41D13FF820023A882 /* PayReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayReq+Request.h"; sourceTree = "<group>"; };
 		84E397A51D13FF820023A882 /* PayReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PayReq+Request.m"; sourceTree = "<group>"; };
 		84E3F9DB1D1875B4009189DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
-		84F0290C1D04752300F1CCD0 /* 51夺宝.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51夺宝.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F0290C1D04752300F1CCD0 /* 51乐购.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "51乐购.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84F029101D04752300F1CCD0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84F029191D04752300F1CCD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84F0291B1D04752300F1CCD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,7 +156,7 @@
 		84F029361D04752300F1CCD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F3A2451D274DF700A71328 /* SendAuthReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendAuthReq+Request.h"; sourceTree = "<group>"; };
 		84F3A2461D274DF700A71328 /* SendAuthReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendAuthReq+Request.m"; sourceTree = "<group>"; };
-		A8B76F05A019A89545238D47 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2CF6BCFCC6737439EF5FAC8 /* libPods-51indiana.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-51indiana.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,7 +176,7 @@
 				84B0A3761D12A7AE00215200 /* libsqlite3.0.tbd in Frameworks */,
 				84B0A3741D12A75600215200 /* SystemConfiguration.framework in Frameworks */,
 				84B0A3711D12A61F00215200 /* libWeChatSDK.a in Frameworks */,
-				B71D2260B05B8345045A98BE /* libPods.a in Frameworks */,
+				065CB9B2D4162215A44A996C /* libPods-51indiana.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,9 +210,18 @@
 				84B0A3771D12A7D400215200 /* libz.1.1.3.tbd */,
 				84B0A3751D12A7AE00215200 /* libsqlite3.0.tbd */,
 				84B0A3731D12A75600215200 /* SystemConfiguration.framework */,
-				A8B76F05A019A89545238D47 /* libPods.a */,
+				A2CF6BCFCC6737439EF5FAC8 /* libPods-51indiana.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84850CA61DA76F3D0086B816 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84850CA71DA76F4E0086B816 /* ADView.h */,
+				84850CA81DA76F4E0086B816 /* ADView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8487C75A1D0D8BD5004B8F6C /* app */ = {
@@ -237,6 +255,8 @@
 				844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */,
 				84DF28621D6C059D001019F4 /* UIWebView+Tools.h */,
 				84DF28631D6C059D001019F4 /* UIWebView+Tools.m */,
+				841BAEDE1D9E6EB800F1AE99 /* UIColor+extension.h */,
+				841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -337,6 +357,7 @@
 		84D93AA51D15C2D000F282AB /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				84850CA61DA76F3D0086B816 /* View */,
 				84D93AA61D15C2D000F282AB /* controller */,
 				84D93AA71D15C2D000F282AB /* model */,
 				84D93AA81D15C2D000F282AB /* viewcontroller */,
@@ -369,6 +390,8 @@
 				84D93AAA1D15C2D000F282AB /* ViewController.m */,
 				8497A0CD1D64C8A100D7DCE8 /* RechargeVC.h */,
 				8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */,
+				84850CA31DA748E90086B816 /* LaunchViewController.h */,
+				84850CA41DA748E90086B816 /* LaunchViewController.m */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -408,15 +431,15 @@
 				84F029281D04752300F1CCD0 /* shopTests */,
 				84F029331D04752300F1CCD0 /* shopUITests */,
 				84F0290D1D04752300F1CCD0 /* Products */,
-				914163C6DC73FD6AA2ED7AD8 /* Pods */,
 				5C29C2DB6099C8F7412050F1 /* Frameworks */,
+				F8722510549DD6849A85FA23 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
 		84F0290D1D04752300F1CCD0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84F0290C1D04752300F1CCD0 /* 51夺宝.app */,
+				84F0290C1D04752300F1CCD0 /* 51乐购.app */,
 				84F029251D04752300F1CCD0 /* 51indiana.xctest */,
 				84F029301D04752300F1CCD0 /* 51indiana.xctest */,
 			);
@@ -472,11 +495,11 @@
 			path = shopUITests;
 			sourceTree = "<group>";
 		};
-		914163C6DC73FD6AA2ED7AD8 /* Pods */ = {
+		F8722510549DD6849A85FA23 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				56D39856BC9656AB63757910 /* Pods.debug.xcconfig */,
-				094D0C1F03EB3F60DC9635A1 /* Pods.release.xcconfig */,
+				75B14AC6C3730F267AEE4691 /* Pods-51indiana.debug.xcconfig */,
+				8451E982F0F9B224B289E0F2 /* Pods-51indiana.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -488,12 +511,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84F029391D04752300F1CCD0 /* Build configuration list for PBXNativeTarget "51indiana" */;
 			buildPhases = (
-				294EDBEEF6CF198DCE8E648C /* Check Pods Manifest.lock */,
+				59DF6779806862D93ECC39DA /* [CP] Check Pods Manifest.lock */,
 				84F029081D04752300F1CCD0 /* Sources */,
 				84F029091D04752300F1CCD0 /* Frameworks */,
 				84F0290A1D04752300F1CCD0 /* Resources */,
-				11777CCB6168E99FAEC20518 /* Embed Pods Frameworks */,
-				BB45E7777CED967B4A4488D6 /* Copy Pods Resources */,
+				D5EE461A96B44CCB9DA5F66A /* [CP] Embed Pods Frameworks */,
+				70AA6163C7F95D3E4C98CB6F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -501,7 +524,7 @@
 			);
 			name = 51indiana;
 			productName = shop;
-			productReference = 84F0290C1D04752300F1CCD0 /* 51夺宝.app */;
+			productReference = 84F0290C1D04752300F1CCD0 /* 51乐购.app */;
 			productType = "com.apple.product-type.application";
 		};
 		84F029241D04752300F1CCD0 /* 51indianaTests */ = {
@@ -614,29 +637,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		11777CCB6168E99FAEC20518 /* Embed Pods Frameworks */ = {
+		59DF6779806862D93ECC39DA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		294EDBEEF6CF198DCE8E648C /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,19 +652,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		BB45E7777CED967B4A4488D6 /* Copy Pods Resources */ = {
+		70AA6163C7F95D3E4C98CB6F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-51indiana/Pods-51indiana-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5EE461A96B44CCB9DA5F66A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-51indiana/Pods-51indiana-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -669,11 +692,13 @@
 				84BCAA101D2021B1003341AD /* UserDefault.m in Sources */,
 				8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */,
 				8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */,
+				84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */,
 				84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */,
 				840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */,
 				84E3979F1D13E9B10023A882 /* HttpRequest.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
+				84850CA91DA76F4E0086B816 /* ADView.m in Sources */,
 				84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */,
 				84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */,
 				844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */,
@@ -685,6 +710,7 @@
 				8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */,
 				8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */,
 				84D1D2D91D19108300F47C44 /* XMLUtil.m in Sources */,
+				841BAEE01D9E6EB800F1AE99 /* UIColor+extension.m in Sources */,
 				84D1D2DC1D1910B700F47C44 /* PayModel.m in Sources */,
 				84E397A61D13FF820023A882 /* PayReq+Request.m in Sources */,
 				84E3190D1D11B1720094F1FE /* NSString+MD5.m in Sources */,
@@ -827,7 +853,7 @@
 		};
 		84F0293A1D04752300F1CCD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 56D39856BC9656AB63757910 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 75B14AC6C3730F267AEE4691 /* Pods-51indiana.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -855,7 +881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
-				PRODUCT_NAME = "51夺宝";
+				PRODUCT_NAME = "51乐购";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
@@ -866,14 +892,14 @@
 		};
 		84F0293B1D04752300F1CCD0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 094D0C1F03EB3F60DC9635A1 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 8451E982F0F9B224B289E0F2 /* Pods-51indiana.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = "";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
@@ -894,7 +920,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
-				PRODUCT_NAME = "51夺宝";
+				PRODUCT_NAME = "51乐购";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
