@@ -33,27 +33,38 @@
 
 /**
  ADViewDeletage
-
+ 
  @param currentPage 返回当前位置
  */
 - (void)currentPage:(NSInteger)currentPage{
-
+    
     NSLog(@"-->%@",@(currentPage));
     
-    if (currentPage == 2) {
-        
-        self.launchButton.hidden = NO;
-    }
-    else {
+    __weak typeof(self) ws = self;
     
-        self.launchButton.hidden = YES;
-    }
+    self.launchButton.transform = CGAffineTransformMakeScale(0.2, 0.2);
+    
+    [UIView animateWithDuration:0.1 animations:^{
+        
+        ws.launchButton.transform = CGAffineTransformIdentity;
+        
+        if (currentPage == 2) {
+            
+            ws.launchButton.hidden = NO;
+        }
+        else {
+            
+            ws.launchButton.hidden = YES;
+        }
+    }];
+    
+    
 }
 
 
 /**
  launchButton action
-
+ 
  @param sender UIButton
  */
 - (void)startApp:(UIButton*)sender{
@@ -104,13 +115,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end
