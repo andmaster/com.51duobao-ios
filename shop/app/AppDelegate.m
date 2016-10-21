@@ -57,6 +57,10 @@
     
     [NSThread sleepForTimeInterval:1.0f];
     
+    //NSLog(@"[[UIDevice currentDevice] name]-->%@",[[UIDevice currentDevice] name]);
+    
+    //NSLog(@"[[UIScreen mainScreen] bounds].size.height-->%@",@([[UIScreen mainScreen] bounds].size.height));
+    
     return YES;
 }
 

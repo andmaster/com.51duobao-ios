@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>NJKWebViewProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +52,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0A80DBC04CA324BF1B82D98B9F7CF155</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>0AB56BF5D8CBC3F050E7405341358475</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>22188D15E8A6450DA2BD54D3B2987AE0</key>
+		<key>1CFB6D87A807B58DF0904EA37DE17399</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2D3089B722CEC415766B05F2DD13CB47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +72,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>70BC44266C6FFE30D2C57129458E070B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>928353533005A4198EBDA5B700D37B64</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E5EC6F9CF8FC751A00417704599A1BD</key>
+		<key>B4A3E08D49931371F7247521A50EAF79</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B4A3E08D49931371F7247521A50EAF79</key>
+		<key>D0D0C9D20C43FA94D4C88FBFE2601B8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCB1D5F4C4200F8C898B9B9475A833E1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -15,12 +15,15 @@
 		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
 		84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CA41DA748E90086B816 /* LaunchViewController.m */; };
 		84850CA91DA76F4E0086B816 /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CA81DA76F4E0086B816 /* ADView.m */; };
+		84850CC01DADD16A0086B816 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CBD1DADD16A0086B816 /* HttpRequest.m */; };
+		84850CC11DADD16A0086B816 /* HttpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84850CBF1DADD16A0086B816 /* HttpViewController.swift */; };
+		84850D891DAE5ED80086B816 /* NSString+Append.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850D881DAE5ED80086B816 /* NSString+Append.m */; };
+		84850D8C1DAE5F110086B816 /* UIImage+adjustImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850D8B1DAE5F110086B816 /* UIImage+adjustImage.m */; };
 		8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */; };
 		8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7601D0D8BD5004B8F6C /* BaseViewController.m */; };
 		8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487C7701D0DDF3F004B8F6C /* UINavigationController+Custom.m */; };
 		8497A0CC1D64C71500D7DCE8 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */; };
 		8497A0CF1D64C8A100D7DCE8 /* RechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */; };
-		84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AA39891D184FB1001F12ED /* HttpViewController.swift */; };
 		84B0A3711D12A61F00215200 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A36C1D12A61F00215200 /* libWeChatSDK.a */; };
 		84B0A3741D12A75600215200 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A3731D12A75600215200 /* SystemConfiguration.framework */; };
 		84B0A3761D12A7AE00215200 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A3751D12A7AE00215200 /* libsqlite3.0.tbd */; };
@@ -42,7 +45,6 @@
 		84E3190D1D11B1720094F1FE /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3190C1D11B1720094F1FE /* NSString+MD5.m */; };
 		84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397821D13C5B20023A882 /* WXApiRequestHandler.m */; };
 		84E397861D13C5DD0023A882 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397851D13C5DD0023A882 /* WXApiResponseHandler.m */; };
-		84E3979F1D13E9B10023A882 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E3979E1D13E9B10023A882 /* HttpRequest.m */; };
 		84E397A61D13FF820023A882 /* PayReq+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E397A51D13FF820023A882 /* PayReq+Request.m */; };
 		84E3F9DC1D1875B4009189DD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E3F9DB1D1875B4009189DD /* MobileCoreServices.framework */; };
 		84F029111D04752300F1CCD0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F029101D04752300F1CCD0 /* main.m */; };
@@ -88,6 +90,14 @@
 		84850CA41DA748E90086B816 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		84850CA71DA76F4E0086B816 /* ADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
 		84850CA81DA76F4E0086B816 /* ADView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADView.m; sourceTree = "<group>"; };
+		84850CBC1DADD16A0086B816 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		84850CBD1DADD16A0086B816 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
+		84850CBE1DADD16A0086B816 /* HttpTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpTag.h; sourceTree = "<group>"; };
+		84850CBF1DADD16A0086B816 /* HttpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpViewController.swift; sourceTree = "<group>"; };
+		84850D871DAE5ED80086B816 /* NSString+Append.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Append.h"; sourceTree = "<group>"; };
+		84850D881DAE5ED80086B816 /* NSString+Append.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Append.m"; sourceTree = "<group>"; };
+		84850D8A1DAE5F110086B816 /* UIImage+adjustImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+adjustImage.h"; sourceTree = "<group>"; };
+		84850D8B1DAE5F110086B816 /* UIImage+adjustImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+adjustImage.m"; sourceTree = "<group>"; };
 		8487C75B1D0D8BD5004B8F6C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8487C75C1D0D8BD5004B8F6C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8487C75E1D0D8BD5004B8F6C /* BaseAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseAPI.h; sourceTree = "<group>"; };
@@ -99,7 +109,6 @@
 		8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		8497A0CD1D64C8A100D7DCE8 /* RechargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RechargeVC.h; sourceTree = "<group>"; };
 		8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RechargeVC.m; sourceTree = "<group>"; };
-		84AA39891D184FB1001F12ED /* HttpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpViewController.swift; sourceTree = "<group>"; };
 		84AA398C1D18512F001F12ED /* shop-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "shop-Bridging-Header.h"; sourceTree = "<group>"; };
 		84B0A36C1D12A61F00215200 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		84B0A36E1D12A61F00215200 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
@@ -136,9 +145,6 @@
 		84E397821D13C5B20023A882 /* WXApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiRequestHandler.m; sourceTree = "<group>"; };
 		84E397841D13C5DD0023A882 /* WXApiResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiResponseHandler.h; sourceTree = "<group>"; };
 		84E397851D13C5DD0023A882 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
-		84E3979D1D13E9B10023A882 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		84E3979E1D13E9B10023A882 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
-		84E397A01D13F63A0023A882 /* HttpTag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HttpTag.h; sourceTree = "<group>"; };
 		84E397A41D13FF820023A882 /* PayReq+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PayReq+Request.h"; sourceTree = "<group>"; };
 		84E397A51D13FF820023A882 /* PayReq+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PayReq+Request.m"; sourceTree = "<group>"; };
 		84E3F9DB1D1875B4009189DD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -257,6 +263,10 @@
 				84DF28631D6C059D001019F4 /* UIWebView+Tools.m */,
 				841BAEDE1D9E6EB800F1AE99 /* UIColor+extension.h */,
 				841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */,
+				84850D871DAE5ED80086B816 /* NSString+Append.h */,
+				84850D881DAE5ED80086B816 /* NSString+Append.m */,
+				84850D8A1DAE5F110086B816 /* UIImage+adjustImage.h */,
+				84850D8B1DAE5F110086B816 /* UIImage+adjustImage.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -281,6 +291,10 @@
 		84970A6F1D53005000A548D3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				84850CBC1DADD16A0086B816 /* HttpRequest.h */,
+				84850CBD1DADD16A0086B816 /* HttpRequest.m */,
+				84850CBE1DADD16A0086B816 /* HttpTag.h */,
+				84850CBF1DADD16A0086B816 /* HttpViewController.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -413,17 +427,6 @@
 			path = tools;
 			sourceTree = "<group>";
 		};
-		84E3979C1D13E9690023A882 /* network */ = {
-			isa = PBXGroup;
-			children = (
-				84E3979D1D13E9B10023A882 /* HttpRequest.h */,
-				84E3979E1D13E9B10023A882 /* HttpRequest.m */,
-				84E397A01D13F63A0023A882 /* HttpTag.h */,
-				84AA39891D184FB1001F12ED /* HttpViewController.swift */,
-			);
-			path = network;
-			sourceTree = "<group>";
-		};
 		84F029031D04752200F1CCD0 = {
 			isa = PBXGroup;
 			children = (
@@ -451,7 +454,6 @@
 			children = (
 				84970A6E1D53003000A548D3 /* Core */,
 				84AA398B1D185114001F12ED /* bridge */,
-				84E3979C1D13E9690023A882 /* network */,
 				84B0A3841D12B51400215200 /* control */,
 				84B0A3851D12B51400215200 /* helper */,
 				8487C75A1D0D8BD5004B8F6C /* app */,
@@ -693,9 +695,7 @@
 				8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */,
 				8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */,
 				84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */,
-				84AA398A1D184FB1001F12ED /* HttpViewController.swift in Sources */,
 				840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */,
-				84E3979F1D13E9B10023A882 /* HttpRequest.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
 				84850CA91DA76F4E0086B816 /* ADView.m in Sources */,
@@ -707,9 +707,13 @@
 				84F029111D04752300F1CCD0 /* main.m in Sources */,
 				84DF28641D6C059D001019F4 /* UIWebView+Tools.m in Sources */,
 				84E397831D13C5B20023A882 /* WXApiRequestHandler.m in Sources */,
+				84850CC11DADD16A0086B816 /* HttpViewController.swift in Sources */,
+				84850D891DAE5ED80086B816 /* NSString+Append.m in Sources */,
 				8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */,
+				84850CC01DADD16A0086B816 /* HttpRequest.m in Sources */,
 				8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */,
 				84D1D2D91D19108300F47C44 /* XMLUtil.m in Sources */,
+				84850D8C1DAE5F110086B816 /* UIImage+adjustImage.m in Sources */,
 				841BAEE01D9E6EB800F1AE99 /* UIColor+extension.m in Sources */,
 				84D1D2DC1D1910B700F47C44 /* PayModel.m in Sources */,
 				84E397A61D13FF820023A882 /* PayReq+Request.m in Sources */,
@@ -861,7 +865,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: ju yuan (GP23LSVS82)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QJNCKRFW6Z;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (
@@ -899,8 +903,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = QJNCKRFW6Z;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
 				HEADER_SEARCH_PATHS = (

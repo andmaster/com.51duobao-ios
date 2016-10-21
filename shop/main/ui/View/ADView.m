@@ -10,8 +10,8 @@
 
 @interface ADView()<UIScrollViewDelegate>
 
-@property (nonatomic, strong) UIScrollView *adScrollView;
-@property (nonatomic, strong) UIPageControl *adPageControl;
+@property (nonatomic, strong, readwrite) UIScrollView *adScrollView;
+@property (nonatomic, strong, readwrite) UIPageControl *adPageControl;
 
 @end
 

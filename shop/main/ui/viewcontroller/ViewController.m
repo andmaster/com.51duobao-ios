@@ -23,6 +23,7 @@
 @property(nonatomic, strong) NJKWebViewProgressView *webViewProgressView;
 @property(nonatomic, strong) NJKWebViewProgress *progressProxy;
 @property(nonatomic, strong) WebViewJavascriptBridge* bridge;
+@property(nonatomic, strong) MJRefreshHeader * header;
 @property(nonatomic, strong) NSMutableArray* cachaUrl;
 @property(nonatomic, assign) BOOL loadingSuccess;
 @property(nonatomic, strong) UIBarButtonItem* backBarButtonItem;
@@ -58,7 +59,11 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+}
+
+- (void)refreshWebView:(MJRefreshNormalHeader*)sender{
     
+    [self.webView reload];
 }
 
 -(void)singleLoad{
@@ -95,7 +100,7 @@
     [super didReceiveMemoryWarning];
 }
 
--(void) didBackBarItem:(UIBarButtonItem*)button{
+-(void)didBackBarItem:(UIBarButtonItem*)button{
     
     if ([self.webView canGoBack]) {
         
@@ -117,11 +122,22 @@
     [self.webView loadRequest:URLRequest];
 }
 
+- (MJRefreshHeader *)header{
+    if (_header == nil) {
+        _header = [MJRefreshNormalHeader headerWithRefreshingTarget:self
+                                                   refreshingAction:@selector(refreshWebView:)];
+    }
+    return _header;
+}
 
 #pragma mark -- UIWebViewDeletage --
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
-    return !([request.URL.absoluteString compare:self.cachaUrl[0]] == NSOrderedSame);
+    if (!self.header.isRefreshing) {
+        
+        return !([request.URL.absoluteString compare:self.cachaUrl[0]] == NSOrderedSame);
+    }
+    return YES;
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView{
@@ -198,6 +214,11 @@
     return _rightBarButtonItem;
 }
 
+- (void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
+    
+    NSLog(@"scrollViewDidScrollToTop");
+}
+
 -(UIWebView *)webView{
     
     if (_webView == nil) {
@@ -217,6 +238,8 @@
         [_webView didNotLeftOrRightScrollForWebView];
        
         [_webView clearBackColorForWebView];
+        
+        //_webView.scrollView.mj_header = self.header;
     }
     return _webView;
 }

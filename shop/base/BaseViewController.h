@@ -16,6 +16,7 @@
 #import "WXApiManager.h"
 #import "WXApiRequestHandler.h"
 #import "GDataXMLNode.h"
+#import "IQKeyboardManager.h"
 
 @interface BaseViewController : UIViewController<HttpRequestDeletage>
 

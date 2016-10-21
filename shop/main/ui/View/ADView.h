@@ -16,6 +16,8 @@
 
 @interface ADView : UIView
 
+@property (nonatomic, strong, readonly) UIScrollView *adScrollView;
+@property (nonatomic, strong, readonly) UIPageControl *adPageControl;
 @property (nonatomic, weak) id<ADViewDeletage> deletage;
 
 - (id)initWithFrame:(CGRect)frame images:(NSArray<UIImage *> *)images;

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "WebViewJavascriptBridgeBase.h"
+#import "MJRefresh.h"
 
 #if defined __MAC_OS_X_VERSION_MAX_ALLOWED
     #import <WebKit/WebKit.h>

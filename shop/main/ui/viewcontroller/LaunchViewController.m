@@ -7,6 +7,7 @@
 //
 
 #import "LaunchViewController.h"
+#import "UIImage+adjustImage.h"
 #import "ADView.h"
 #import "AppDelegate.h"
 #import "UserDefault.h"
@@ -38,7 +39,7 @@
  */
 - (void)currentPage:(NSInteger)currentPage{
     
-    NSLog(@"-->%@",@(currentPage));
+    //NSLog(@"-->%@",@(currentPage));
     
     __weak typeof(self) ws = self;
     
@@ -81,10 +82,11 @@
 
 - (ADView *)adView{
     if (_adView == nil) {
+        UIImage * image = [UIImage new];
         _adView = [[ADView alloc] initWithFrame:[[UIScreen mainScreen] bounds]
-                                         images:@[IMAGE(@"image1.jpg"),
-                                                  IMAGE(@"image2.jpg"),
-                                                  IMAGE(@"image3.jpg")]];
+                                         images:@[[image addImageNameForFit:@"1"],
+                                                  [image addImageNameForFit:@"2"],
+                                                  [image addImageNameForFit:@"3"]]];
         _adView.deletage = self;
     }
     return _adView;
@@ -93,17 +95,19 @@
 - (UIButton *)launchButton{
     
     if (_launchButton == nil) {
+        CGFloat minY = CGRectGetMinY(self.adView.adPageControl.frame);
         _launchButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _launchButton.frame = CGRectMake(0, 0, 100, 50);
-        _launchButton.center = CGPointMake(SCREEN_WIDTH/2, SCREEN_HEIGHT/2);
+        _launchButton.frame = CGRectMake(0, 0, 80, 25);
+        _launchButton.center = CGPointMake(SCREEN_WIDTH/2, minY-25);
         _launchButton.layer.masksToBounds = YES;
         _launchButton.layer.borderWidth = 1;
-        _launchButton.layer.borderColor = CGCOLOR(@"#E22222");
+        _launchButton.layer.borderColor = [UIColor whiteColor].CGColor;
+        _launchButton.layer.cornerRadius = 5;
         _launchButton.backgroundColor = [UIColor clearColor];
-        _launchButton.titleLabel.font = FONT(20);
-        [_launchButton setTitleColor:COLOR(@"#E22222")
+        _launchButton.titleLabel.font = FONT(15);
+        [_launchButton setTitleColor:[UIColor whiteColor]
                             forState:UIControlStateNormal];
-        [_launchButton setTitle:@"开始体验"
+        [_launchButton setTitle:@"立即体验"
                        forState:UIControlStateNormal];
         [_launchButton addTarget:self
                           action:@selector(startApp:)

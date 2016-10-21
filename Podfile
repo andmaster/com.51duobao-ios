@@ -6,4 +6,6 @@ pod 'NJKWebViewProgress', '~> 0.2.3'
 pod 'WebViewJavascriptBridge', '~> 5.0'
 pod 'GDataXML-HTML', '~> 1.3.0'
 pod 'DLPanableWebView', '~> 0.9.1'
+pod 'IQKeyboardManager'
+pod 'MJRefresh'
 end

@@ -10,46 +10,49 @@
 #define Constants_h
 
 #pragma mark -- URL --
+typedef NSString * APPURLName;
 
-static NSString* const HOST = @"http://db5151.bdchenmei.cn";
+static APPURLName const HOST = @"http://db5151.bdchenmei.cn";
 
-static NSString* const MOBILE = @"/?/mobile/mobile"; //主页
+static APPURLName const MOBILE = @"/?/mobile/mobile"; //主页
 
-static NSString* const GOODSLIST = @"/?/mobile/mobile/glist"; //商品列表（全部商品）
+static APPURLName const GOODSLIST = @"/?/mobile/mobile/glist"; //商品列表（全部商品）
 
-static NSString* const LOTTERY = @"/?/mobile/mobile/lottery";//最新揭晓
+static APPURLName const LOTTERY = @"/?/mobile/mobile/lottery";//最新揭晓
 
-static NSString* const CARTLIST = @"/?/mobile/cart/cartlist";//购物车
+static APPURLName const CARTLIST = @"/?/mobile/cart/cartlist";//购物车
 
-static NSString* const LOGINURL = @"/?/mobile/user/login";//登录
+static APPURLName const LOGINURL = @"/?/mobile/user/login";//登录
 
-static NSString* const HOME = @"/?/mobile/home";//主页
+static APPURLName const HOME = @"/?/mobile/home";//主页
 
-static NSString* const SEARCH = @"/?/mobile/mobile/search1";//搜索
+static APPURLName const SEARCH = @"/?/mobile/mobile/search1";//搜索
 
+typedef NSString * WXPayFieldName;
 //打开微信
-static NSString * const OPEN_WX_TYPE = @"wxbdeb1cfe97a2faaf://";
+static WXPayFieldName const OPEN_WX_TYPE = @"wxbdeb1cfe97a2faaf://";
 //**是 APP_ID 替换为你的应用从官方网站申请到的合法appId
-static NSString* const APP_ID_WX = @"wxbdeb1cfe97a2faaf";
+static WXPayFieldName const APP_ID_WX = @"wxbdeb1cfe97a2faaf";
 //**是 appSectet
-static NSString* const APP_SECTET_WX = @"863f7c87ddbbfaceb29a8588fd65b499";
+static WXPayFieldName const APP_SECTET_WX = @"863f7c87ddbbfaceb29a8588fd65b499";
 //**是 mch_id 商户号
-static NSString* const MCH_ID_WX = @"1388650102";
+static WXPayFieldName const MCH_ID_WX = @"1388650102";
 //**是 交易类型
-static NSString* const TRADE_TYPE_WX = @"APP";
+static WXPayFieldName const TRADE_TYPE_WX = @"APP";
 //**是 扩展字段
-static NSString* const PACKAGE_WX = @"Sign=WXPay";
+static WXPayFieldName const PACKAGE_WX = @"Sign=WXPay";
 //**是 微信订单通知地址
-static NSString* const NOTIFY_URL_WX = @"http://app.dd1yyg.com/payok.php";//异步地址
+static WXPayFieldName const NOTIFY_URL_WX = @"http://app.dd1yyg.com/payok.php";//异步地址
 //微信支付同步地址
-static NSString* const NOTIFY_URL_PAYED_WX = @"http://app.dd1yyg.com/pay.php";//同步地址
+static WXPayFieldName const NOTIFY_URL_PAYED_WX = @"http://app.dd1yyg.com/pay.php";//同步地址
 
+typedef NSString * WXLoginFieldName;
 //**是 登录
-static NSString* const  GRANT_TYPE_WX = @"authorization_code";
+static WXPayFieldName const  GRANT_TYPE_WX = @"authorization_code";
 //**是 应用授权作用域
-static NSString* const SCOPE_WX = @"snsapi_userinfo";
+static WXPayFieldName const SCOPE_WX = @"snsapi_userinfo";
 //**是 用于保持请求和回调的状态
-static NSString* const STATE_WX = @"ding_ding_yun_gou";
+static WXPayFieldName const STATE_WX = @"ding_ding_yun_gou";
 
 //统一下单
 //static NSString* const GEN_URL = @"http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php?plat=android";//测试
@@ -58,8 +61,10 @@ static NSString* const GEN_URL = @"https://api.mch.weixin.qq.com/pay/unifiedorde
 static NSString* const GET_ACCESS_TOKEN = @"https://api.weixin.qq.com/sns/oauth2/access_token";
 
 //UIWebViewBridge handlerName
-static NSString* const PayByWx = @"PayByWxsession";
-static NSString* const PayByAlipay = @"PayByAlipay";
-static NSString* const LoginByWx = @"LoginByWxsession";
+
+typedef NSString * WebViewHandlerName;
+static WebViewHandlerName const PayByWx = @"PayByWxsession";
+static WebViewHandlerName const PayByAlipay = @"PayByAlipay";
+static WebViewHandlerName const LoginByWx = @"LoginByWxsession";
 
 #endif /* Constants_h */
