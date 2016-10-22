@@ -221,12 +221,12 @@
     [[UserDefault share] saveNonceStr:@""];//清楚随机字符串
     
     [WXApiRequestHandler sendOpenID:model.appid
-                        partnerId:model.mch_id //商户号
-                         prepayId:model.prepay_id //预支付id
-                         nonceStr:model.nonce_str //随机字符串
-                        timeStamp:model.timestamp //时间戳
-                          package:model.package //扩展字段
-                             sign:model.sign]; //签名
+                          partnerId:model.mch_id //商户号
+                           prepayId:model.prepay_id //预支付id
+                           nonceStr:model.nonce_str //随机字符串
+                          timeStamp:model.timestamp //时间戳
+                            package:model.package //扩展字段
+                               sign:model.sign]; //签名
     
     [[NSNotificationCenter defaultCenter] removeObserver:self name:XMLParserDidEndNotification object:nil];
 }
