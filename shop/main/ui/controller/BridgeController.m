@@ -241,7 +241,7 @@
         
         ViewController* vc = (ViewController*)self.viewController;
         
-        NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:NOTIFY_URL_PAYED_WX]];
+        NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:[HOST stringByAppendingString:NOTIFY_URL_PAYED_WX]]];
         
         [vc.webView loadRequest:request];
     }

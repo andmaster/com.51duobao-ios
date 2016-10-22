@@ -51,7 +51,7 @@
     // Override point for customization after application launch.
     
     //向微信注册
-    [WXApi registerApp:APP_ID_WX withDescription:@"丁丁云购 1.0"];
+    [WXApi registerApp:APP_ID_WX withDescription:@"51乐购 1.0"];
     
     [self switchRootViewController];
     

@@ -12,7 +12,7 @@
 #pragma mark -- URL --
 typedef NSString * APPURLName;
 
-static APPURLName const HOST = @"http://db5151.bdchenmei.cn";
+static APPURLName const HOST = @"http://www.51indiana.com";
 
 static APPURLName const MOBILE = @"/?/mobile/mobile"; //主页
 
@@ -42,9 +42,9 @@ static WXPayFieldName const TRADE_TYPE_WX = @"APP";
 //**是 扩展字段
 static WXPayFieldName const PACKAGE_WX = @"Sign=WXPay";
 //**是 微信订单通知地址
-static WXPayFieldName const NOTIFY_URL_WX = @"http://app.dd1yyg.com/payok.php";//异步地址
+static WXPayFieldName const NOTIFY_URL_WX = @"/payok.php";//异步地址
 //微信支付同步地址
-static WXPayFieldName const NOTIFY_URL_PAYED_WX = @"http://app.dd1yyg.com/pay.php";//同步地址
+static WXPayFieldName const NOTIFY_URL_PAYED_WX = @"/pay.php";//同步地址
 
 typedef NSString * WXLoginFieldName;
 //**是 登录

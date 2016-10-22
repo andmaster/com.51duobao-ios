@@ -45,7 +45,7 @@
 
 /******是 通知地址****/
 +(NSString*)notifyURL{
-    return NOTIFY_URL_WX;
+    return [HOST stringByAppendingString:NOTIFY_URL_WX];
 }
 
 /*****是 交易类型*****/
