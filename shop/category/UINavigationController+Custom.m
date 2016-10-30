@@ -8,6 +8,10 @@
 
 #import "UINavigationController+Custom.h"
 
+@interface UINavigationController()
+
+@end
+
 @implementation UINavigationController (Custom)
 
 -(void)viewDidLoad{
@@ -25,6 +29,13 @@
     
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],
                                                  NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
+    
+
+    [self.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        NSLog(@"topViewController%@",[[obj class] description]);
+    }];
 }
+
 
 @end

@@ -30,11 +30,11 @@ DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
   - DLPanableWebView (~> 0.9.1)
   - GDataXML-HTML (~> 1.3.0)
-  - IQKeyboardManager
-  - MJRefresh
+  - IQKeyboardManager (~> 4.0.5)
+  - MJRefresh (~> 3.1.12)
   - NJKWebViewProgress (~> 0.2.3)
   - SVProgressHUD (~> 2.0.3)
-  - WebViewJavascriptBridge (~> 5.0)
+  - WebViewJavascriptBridge (~> 5.0.5)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -46,6 +46,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
 
-PODFILE CHECKSUM: 4415cb4bab39e4c4be263fa471e16a028d5e1e72
+PODFILE CHECKSUM: f87711ad6abb5e381bd98e7a2e8740983ac4cca5
 
 COCOAPODS: 1.0.1

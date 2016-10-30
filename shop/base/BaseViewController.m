@@ -7,8 +7,13 @@
 //
 
 #import "BaseViewController.h"
+#include <stdio.h>
 
 @implementation BaseViewController
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+}
 
 /*json解析*/
 - (nullable id)parserWithJsonString:(NSString *)jsonString {
@@ -29,6 +34,12 @@
     }
     
     return json;
+}
+
+- (void)showToastFmt:(NSString *)fmtStr,...{
+    
+    
+
 }
 
 /*

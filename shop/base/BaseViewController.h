@@ -10,13 +10,14 @@
 #import "BaseAPI.h"
 #import "UserDefault.h"
 #import "Constants.h"
-#import "UINavigationController+Custom.h"
 #import "NSString+MD5.h"
 #import "HttpRequest.h"
 #import "WXApiManager.h"
 #import "WXApiRequestHandler.h"
 #import "GDataXMLNode.h"
 #import "IQKeyboardManager.h"
+#import "UINavigationController+Custom.h"
+#import "UIViewController+Custom.h"
 
 @interface BaseViewController : UIViewController<HttpRequestDeletage>
 
@@ -25,5 +26,6 @@
 
 /* 显示用户信息提示框 */
 - (void)showToast:(NSString * _Nonnull) msg;
+//- (void)showToastFmt:(NSString * _Nonnull)fmtStr,...;
 
 @end

@@ -133,6 +133,13 @@
 #pragma mark -- UIWebViewDeletage --
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
+    NSString * ID = [request.URL.absoluteString componentsSeparatedByString:@"/"].lastObject;
+    
+    if (![WXApi isWXAppInstalled] && [[HOST stringByAppendingFormat:@"/?/mobile/mobile/item/%@",ID] compare:request.URL.absoluteString] == NSOrderedSame) {
+        
+        [[UIApplication sharedApplication] openURL:request.URL]; return NO;
+    }
+    
     if (!self.header.isRefreshing) {
         
         return !([request.URL.absoluteString compare:self.cachaUrl[0]] == NSOrderedSame);

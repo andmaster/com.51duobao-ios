@@ -13,6 +13,7 @@
 		840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BADB01D4EDFC60073FABB /* URLSetUtil.m */; };
 		841BAEE01D9E6EB800F1AE99 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */; };
 		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
+		847965921DC0AFE400FC36E2 /* UIViewController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 847965911DC0AFE400FC36E2 /* UIViewController+Custom.m */; };
 		84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CA41DA748E90086B816 /* LaunchViewController.m */; };
 		84850CA91DA76F4E0086B816 /* ADView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CA81DA76F4E0086B816 /* ADView.m */; };
 		84850CC01DADD16A0086B816 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84850CBD1DADD16A0086B816 /* HttpRequest.m */; };
@@ -86,6 +87,8 @@
 		844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JavaScriptAlert.h"; sourceTree = "<group>"; };
 		844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+JavaScriptAlert.m"; sourceTree = "<group>"; };
 		8451E982F0F9B224B289E0F2 /* Pods-51indiana.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51indiana.release.xcconfig"; path = "Pods/Target Support Files/Pods-51indiana/Pods-51indiana.release.xcconfig"; sourceTree = "<group>"; };
+		847965901DC0AFE400FC36E2 /* UIViewController+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Custom.h"; sourceTree = "<group>"; };
+		847965911DC0AFE400FC36E2 /* UIViewController+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Custom.m"; sourceTree = "<group>"; };
 		84850CA31DA748E90086B816 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
 		84850CA41DA748E90086B816 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		84850CA71DA76F4E0086B816 /* ADView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADView.h; sourceTree = "<group>"; };
@@ -267,6 +270,8 @@
 				84850D881DAE5ED80086B816 /* NSString+Append.m */,
 				84850D8A1DAE5F110086B816 /* UIImage+adjustImage.h */,
 				84850D8B1DAE5F110086B816 /* UIImage+adjustImage.m */,
+				847965901DC0AFE400FC36E2 /* UIViewController+Custom.h */,
+				847965911DC0AFE400FC36E2 /* UIViewController+Custom.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -694,6 +699,7 @@
 				84BCAA101D2021B1003341AD /* UserDefault.m in Sources */,
 				8487C7711D0DDF3F004B8F6C /* UINavigationController+Custom.m in Sources */,
 				8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */,
+				847965921DC0AFE400FC36E2 /* UIViewController+Custom.m in Sources */,
 				84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */,
 				840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
