@@ -34,6 +34,7 @@
 		84B0A37E1D12AAE300215200 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A37D1D12AAE300215200 /* UIKit.framework */; };
 		84B0A3801D12AB3200215200 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B0A37F1D12AB3200215200 /* Foundation.framework */; };
 		84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B0A3891D12B59500215200 /* WXApiManager.m */; };
+		84B68B3B1DC621B500EFF06C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B68B3A1DC621B500EFF06C /* CFNetwork.framework */; };
 		84BCAA101D2021B1003341AD /* UserDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 84BCAA0F1D2021B1003341AD /* UserDefault.m */; };
 		84D1D2D91D19108300F47C44 /* XMLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D2D81D19108300F47C44 /* XMLUtil.m */; };
 		84D1D2DC1D1910B700F47C44 /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D1D2DB1D1910B700F47C44 /* PayModel.m */; };
@@ -126,6 +127,7 @@
 		84B0A37F1D12AB3200215200 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		84B0A3881D12B59500215200 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		84B0A3891D12B59500215200 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		84B68B3A1DC621B500EFF06C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		84BCAA0E1D2021B1003341AD /* UserDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefault.h; sourceTree = "<group>"; };
 		84BCAA0F1D2021B1003341AD /* UserDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefault.m; sourceTree = "<group>"; };
 		84C7B15E1D23FB5E0028B09D /* Sign.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sign.h; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B68B3B1DC621B500EFF06C /* CFNetwork.framework in Frameworks */,
 				8497A0CC1D64C71500D7DCE8 /* StoreKit.framework in Frameworks */,
 				84E3F9DC1D1875B4009189DD /* MobileCoreServices.framework in Frameworks */,
 				84D93AA41D15B92E00F282AB /* libxml2.2.tbd in Frameworks */,
@@ -209,6 +212,7 @@
 		5C29C2DB6099C8F7412050F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84B68B3A1DC621B500EFF06C /* CFNetwork.framework */,
 				8497A0CB1D64C71500D7DCE8 /* StoreKit.framework */,
 				84E3F9DB1D1875B4009189DD /* MobileCoreServices.framework */,
 				84D93AA31D15B92E00F282AB /* libxml2.2.tbd */,
