@@ -232,7 +232,7 @@
         
         CGRect frame = CGRectMake(0, 0, self.width, self.height);
         
-        _webView = [[UIWebView alloc] initWithFrame:frame];
+        _webView = [[DLPanableWebView alloc] initWithFrame:frame];
         
         _webView.backgroundColor = [UIColor whiteColor];
         
@@ -247,6 +247,8 @@
         [_webView clearBackColorForWebView];
         
         //_webView.scrollView.mj_header = self.header;
+        
+        _webView.enablePanGesture = YES;
     }
     return _webView;
 }

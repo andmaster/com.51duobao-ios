@@ -61,6 +61,8 @@
     
     //NSLog(@"[[UIScreen mainScreen] bounds].size.height-->%@",@([[UIScreen mainScreen] bounds].size.height));
     
+    //[[UINavigationBar appearance].backItem.backBarButtonItem setTintColor:[UIColor whiteColor]];
+    
     return YES;
 }
 

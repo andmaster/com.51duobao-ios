@@ -25,7 +25,7 @@
 - (nullable id)parserWithJsonString:(NSString * _Nonnull)jsonString;
 
 /* 显示用户信息提示框 */
-- (void)showToast:(NSString * _Nonnull) msg;
+- (void)showToast:(NSString * _Nonnull)msg;
 //- (void)showToastFmt:(NSString * _Nonnull)fmtStr,...;
 
 @end

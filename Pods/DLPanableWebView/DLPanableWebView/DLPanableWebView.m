@@ -34,14 +34,20 @@
     return image;
 }
 
+
+/**
+ 设置返回View
+
+ @param view 
+ */
 + (void)addShadowToView:(UIView *)view{
     CALayer *layer = view.layer;
     UIBezierPath *path = [UIBezierPath bezierPathWithRect:layer.bounds];
     layer.shadowPath = path.CGPath;
-    layer.shadowColor = [UIColor blackColor].CGColor;
+    layer.shadowColor = [UIColor whiteColor].CGColor;//偏移背景色
     layer.shadowOffset = CGSizeZero;
-    layer.shadowOpacity = 0.4f;
-    layer.shadowRadius = 8.0f;
+    layer.shadowOpacity = 1.0f;//偏移背景不透明度
+    layer.shadowRadius = 0.0f;//偏移渐变值
 }
 
 - (void)setDelegate:(id<UIWebViewDelegate>)delegate{

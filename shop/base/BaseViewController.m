@@ -15,6 +15,10 @@
     [super viewDidLoad];
 }
 
+- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion{
+    NSLog(@"presentViewController");
+}
+
 /*json解析*/
 - (nullable id)parserWithJsonString:(NSString *)jsonString {
     
