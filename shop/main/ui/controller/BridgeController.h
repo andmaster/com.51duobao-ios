@@ -10,7 +10,7 @@
 #import "WXApiManager.h"
 #import "BaseViewController.h"
 
-@class WebViewJavascriptBridge;
+@class WKWebViewJavascriptBridge;
 
 @interface BridgeController : NSObject<WXApiManagerDelegate>
 
@@ -22,6 +22,6 @@
 - (void)sendWxAuth;
 
 /* 监听点击js */
-- (void)registerHandler:(WebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController;
+- (void)registerHandler:(WKWebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController;
 
 @end

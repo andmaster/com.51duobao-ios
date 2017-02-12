@@ -14,6 +14,8 @@ typedef NSString * APPURLName;
 
 static APPURLName const HOST = @"http://www.51indiana.com";
 
+static APPURLName const INDEX = @"/index.php/mobile/mobile/";
+
 static APPURLName const MOBILE = @"/?/mobile/mobile"; //主页
 
 static APPURLName const GOODSLIST = @"/?/mobile/mobile/glist"; //商品列表（全部商品）

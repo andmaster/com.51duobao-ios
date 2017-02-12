@@ -7,7 +7,7 @@
 //
 
 #import "BridgeController.h"
-#import "WebViewJavascriptBridge.h"
+#import "WKWebViewJavascriptBridge.h"
 #import "WXApiRequestHandler.h"
 #import "GDataXMLNode.h"
 #import "HttpRequest.h"
@@ -42,7 +42,7 @@
 }
 
 /* 监听点击js */
-- (void)registerHandler:(WebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController{
+- (void)registerHandler:(WKWebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController{
     
     _viewController = viewController;
     
@@ -56,7 +56,7 @@
         
         if (![WXApi isWXAppInstalled]) {//TODO
             
-            NSURL * URL = [(ViewController*)viewController webView].request.URL;
+            NSURL * URL = [(ViewController*)viewController webView].URL;
             
             if ([[UIApplication sharedApplication] canOpenURL:URL]) {
                 

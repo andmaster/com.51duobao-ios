@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		065CB9B2D4162215A44A996C /* libPods-51indiana.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CF6BCFCC6737439EF5FAC8 /* libPods-51indiana.a */; };
+		572F7F551E503FE900E6215A /* WKWebView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F7F541E503FE900E6215A /* WKWebView+Tools.m */; };
+		572F7F581E50522600E6215A /* WKWebViewDeletage.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F7F571E50522600E6215A /* WKWebViewDeletage.m */; };
 		8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403747B1D1684DC009D7D64 /* OrderUtil.m */; };
 		8403747F1D168E6A009D7D64 /* IPAddress.c in Sources */ = {isa = PBXBuildFile; fileRef = 8403747D1D168E6A009D7D64 /* IPAddress.c */; };
-		840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 840BADB01D4EDFC60073FABB /* URLSetUtil.m */; };
 		841BAEE01D9E6EB800F1AE99 /* UIColor+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */; };
 		844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 844E76971D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m */; };
 		847965921DC0AFE400FC36E2 /* UIViewController+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 847965911DC0AFE400FC36E2 /* UIViewController+Custom.m */; };
@@ -76,13 +77,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		572F7F531E503FE900E6215A /* WKWebView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+Tools.h"; sourceTree = "<group>"; };
+		572F7F541E503FE900E6215A /* WKWebView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Tools.m"; sourceTree = "<group>"; };
+		572F7F561E50522600E6215A /* WKWebViewDeletage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDeletage.h; sourceTree = "<group>"; };
+		572F7F571E50522600E6215A /* WKWebViewDeletage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewDeletage.m; sourceTree = "<group>"; };
 		75B14AC6C3730F267AEE4691 /* Pods-51indiana.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-51indiana.debug.xcconfig"; path = "Pods/Target Support Files/Pods-51indiana/Pods-51indiana.debug.xcconfig"; sourceTree = "<group>"; };
 		8403747A1D1684DC009D7D64 /* OrderUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderUtil.h; sourceTree = "<group>"; };
 		8403747B1D1684DC009D7D64 /* OrderUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderUtil.m; sourceTree = "<group>"; };
 		8403747D1D168E6A009D7D64 /* IPAddress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPAddress.c; sourceTree = "<group>"; };
 		8403747E1D168E6A009D7D64 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
-		840BADAF1D4EDFC60073FABB /* URLSetUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLSetUtil.h; sourceTree = "<group>"; };
-		840BADB01D4EDFC60073FABB /* URLSetUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLSetUtil.m; sourceTree = "<group>"; };
 		841BAEDE1D9E6EB800F1AE99 /* UIColor+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+extension.h"; sourceTree = "<group>"; };
 		841BAEDF1D9E6EB800F1AE99 /* UIColor+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+extension.m"; sourceTree = "<group>"; };
 		844E76961D4999C1008B1BBD /* UIWebView+JavaScriptAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+JavaScriptAlert.h"; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				84850D8B1DAE5F110086B816 /* UIImage+adjustImage.m */,
 				847965901DC0AFE400FC36E2 /* UIViewController+Custom.h */,
 				847965911DC0AFE400FC36E2 /* UIViewController+Custom.m */,
+				572F7F531E503FE900E6215A /* WKWebView+Tools.h */,
+				572F7F541E503FE900E6215A /* WKWebView+Tools.m */,
 			);
 			path = category;
 			sourceTree = "<group>";
@@ -415,6 +420,8 @@
 				8497A0CE1D64C8A100D7DCE8 /* RechargeVC.m */,
 				84850CA31DA748E90086B816 /* LaunchViewController.h */,
 				84850CA41DA748E90086B816 /* LaunchViewController.m */,
+				572F7F561E50522600E6215A /* WKWebViewDeletage.h */,
+				572F7F571E50522600E6215A /* WKWebViewDeletage.m */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -430,8 +437,6 @@
 				8403747E1D168E6A009D7D64 /* IPAddress.h */,
 				84D1D2D71D19108300F47C44 /* XMLUtil.h */,
 				84D1D2D81D19108300F47C44 /* XMLUtil.m */,
-				840BADAF1D4EDFC60073FABB /* URLSetUtil.h */,
-				840BADB01D4EDFC60073FABB /* URLSetUtil.m */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -705,10 +710,11 @@
 				8487C7691D0D8BD5004B8F6C /* AppDelegate.m in Sources */,
 				847965921DC0AFE400FC36E2 /* UIViewController+Custom.m in Sources */,
 				84850CA51DA748E90086B816 /* LaunchViewController.m in Sources */,
-				840BADB11D4EDFC60073FABB /* URLSetUtil.m in Sources */,
 				84D93AAE1D15C43400F282AB /* BridgeController.m in Sources */,
+				572F7F551E503FE900E6215A /* WKWebView+Tools.m in Sources */,
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
 				84850CA91DA76F4E0086B816 /* ADView.m in Sources */,
+				572F7F581E50522600E6215A /* WKWebViewDeletage.m in Sources */,
 				84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */,
 				84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */,
 				844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */,

@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WKWebViewDeletage.h"
 #import "BaseViewController.h"
 
-@interface ViewController : BaseViewController<UIWebViewDelegate>
+@interface ViewController : BaseViewController
 
-@property (nonatomic, strong) DLPanableWebView * webView;
+@property(nonatomic, strong) WKWebView * webView;
+@property(nonatomic, strong) UIBarButtonItem* backBarButtonItem;
+@property(nonatomic, strong) UIBarButtonItem* rightBarButtonItem;
+
+//@property (nonatomic, strong) DLPanableWebView * webView;
 
 @end
 
