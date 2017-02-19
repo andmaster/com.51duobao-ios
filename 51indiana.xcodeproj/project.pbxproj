@@ -592,7 +592,7 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = QJNCKRFW6Z;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					84F029241D04752300F1CCD0 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -902,11 +902,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "51乐购";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "5035c69c-321c-4a12-9d77-fcdcff69579e";
+				PROVISIONING_PROFILE_SPECIFIER = dev.com.indiana.shop;
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -919,7 +919,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: ju yuan (QJNCKRFW6Z)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = QJNCKRFW6Z;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
@@ -941,10 +941,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.indiana.shop;
 				PRODUCT_MODULE_NAME = DDYYYGModule;
 				PRODUCT_NAME = "51乐购";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "dcfabc51-9cfc-4a41-86ab-3a3493119265";
+				PROVISIONING_PROFILE_SPECIFIER = com.indiana.shop;
 				SWIFT_OBJC_BRIDGING_HEADER = "shop/bridge/shop-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
