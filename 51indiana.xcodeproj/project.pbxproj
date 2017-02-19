@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		065CB9B2D4162215A44A996C /* libPods-51indiana.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2CF6BCFCC6737439EF5FAC8 /* libPods-51indiana.a */; };
+		494FAF1D1E598F130089C979 /* WKWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 494FAF1C1E598F130089C979 /* WKWebViewUIDelegate.m */; };
 		572F7F551E503FE900E6215A /* WKWebView+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F7F541E503FE900E6215A /* WKWebView+Tools.m */; };
 		572F7F581E50522600E6215A /* WKWebViewDeletage.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F7F571E50522600E6215A /* WKWebViewDeletage.m */; };
 		8403747C1D1684DC009D7D64 /* OrderUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8403747B1D1684DC009D7D64 /* OrderUtil.m */; };
@@ -77,6 +78,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		494FAF1B1E598F130089C979 /* WKWebViewUIDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewUIDelegate.h; sourceTree = "<group>"; };
+		494FAF1C1E598F130089C979 /* WKWebViewUIDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewUIDelegate.m; sourceTree = "<group>"; };
 		572F7F531E503FE900E6215A /* WKWebView+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKWebView+Tools.h"; sourceTree = "<group>"; };
 		572F7F541E503FE900E6215A /* WKWebView+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+Tools.m"; sourceTree = "<group>"; };
 		572F7F561E50522600E6215A /* WKWebViewDeletage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewDeletage.h; sourceTree = "<group>"; };
@@ -422,6 +425,8 @@
 				84850CA41DA748E90086B816 /* LaunchViewController.m */,
 				572F7F561E50522600E6215A /* WKWebViewDeletage.h */,
 				572F7F571E50522600E6215A /* WKWebViewDeletage.m */,
+				494FAF1B1E598F130089C979 /* WKWebViewUIDelegate.h */,
+				494FAF1C1E598F130089C979 /* WKWebViewUIDelegate.m */,
 			);
 			path = viewcontroller;
 			sourceTree = "<group>";
@@ -715,6 +720,7 @@
 				8487C76A1D0D8BD5004B8F6C /* BaseViewController.m in Sources */,
 				84850CA91DA76F4E0086B816 /* ADView.m in Sources */,
 				572F7F581E50522600E6215A /* WKWebViewDeletage.m in Sources */,
+				494FAF1D1E598F130089C979 /* WKWebViewUIDelegate.m in Sources */,
 				84F3A2471D274DF700A71328 /* SendAuthReq+Request.m in Sources */,
 				84B0A38A1D12B59500215200 /* WXApiManager.m in Sources */,
 				844E76981D4999C1008B1BBD /* UIWebView+JavaScriptAlert.m in Sources */,

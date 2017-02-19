@@ -112,9 +112,9 @@
         
         _webView.backgroundColor = [UIColor whiteColor];
         
-        // _webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
-        
         [_webView.scrollView setShowsVerticalScrollIndicator:NO];//隐藏垂直滚动条
+        
+        // _webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
         
         // [_webView didNotLeftOrRightScrollForWebView];
         
