@@ -36,7 +36,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>18</string>
+	<string>21</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSApplicationCategoryType</key>
@@ -216,11 +216,11 @@
 		</dict>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>"51乐购"想使用您的相机</string>
+	<string>如果不允许，您将不能更换头像等操作。</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>"51乐购"想打开您的相册</string>
+	<string>如果不允许，您将不能更换头像等操作。</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>

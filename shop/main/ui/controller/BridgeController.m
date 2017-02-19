@@ -28,18 +28,6 @@
 
 @implementation BridgeController
 
-+(instancetype)share{
-
-    static BridgeController* bridgeController =  nil;
-    static dispatch_once_t once;
-    
-    dispatch_once(&once, ^{
-        bridgeController = [[BridgeController alloc] init];
-    });
-    
-    return bridgeController;
-    
-}
 
 /* 监听点击js */
 - (void)registerHandler:(WKWebViewJavascriptBridge*)bridge viewController:(BaseViewController*)viewController{

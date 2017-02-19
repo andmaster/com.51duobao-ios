@@ -14,8 +14,6 @@
 
 @interface BridgeController : NSObject<WXApiManagerDelegate>
 
-+(instancetype)share;
-
 -(void)executUnifiedOrder:(id)data;
 
 /*  微信登录授权*/

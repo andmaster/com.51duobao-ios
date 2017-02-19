@@ -10,7 +10,7 @@
 #define BaseAPI_h
 
 #import "UIColor+extension.h"
-#import "DLPanableWebView.h"
+//#import "DLPanableWebView.h"
 
 #define UIColorFromRGB(rgbValue) [UIColor \
 colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 \
@@ -28,7 +28,7 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define COLOR(stringToConvert) [UIColor hexStringToColor:stringToConvert]
 #define CGCOLOR(stringToConvert) COLOR(stringToConvert).CGColor
 #define IMAGE(imageName) [UIImage imageNamed:imageName]
-#define URLREQUEST(URLString) [NSURLRequest requestWithURL:[NSURL URLWithString:URLString]]
+#define URLREQUEST(URLString) [NSMutableURLRequest requestWithURL:[NSURL URLWithString:URLString]]
 
 
 #ifdef DEBUG

@@ -17,7 +17,8 @@
 @property(nonatomic, assign) CGFloat height;
 @property(nonatomic, assign) CGRect mainFrame;
 @property(nonatomic, assign) CGRect statusFrame;
-@property(nonatomic, strong) WKWebViewJavascriptBridge* bridge;
+@property(nonatomic, strong) BridgeController * bridgeController;
+@property(nonatomic, strong) WKWebViewJavascriptBridge * bridge;
 
 @end
 
@@ -32,49 +33,16 @@
     
     [self.view addSubview:self.webView];
     
-    [WXApiManager sharedManager].delegate = [BridgeController share];
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
-    [self singleLoad];
-    
-    [[BridgeController share] registerHandler:self.bridge viewController:self];
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-}
-
--(void)singleLoad{
-    
-    static NSURLRequest* URLRequest;
-    
-    static dispatch_once_t once;
-    
-    if (URLRequest != nil) {
-        
-        [self.webView reload];
-    }
-    
-    dispatch_once(&once, ^{
-        
-        URLRequest = URLREQUEST([HOST stringByAppendingString:INDEX]);
-        
-        [self.webView loadRequest:URLRequest];
-    });
+    [WXApiManager sharedManager].delegate = self.bridgeController;
 }
 
 - (void)didReceiveMemoryWarning {
-    
     [super didReceiveMemoryWarning];
 }
 
 -(void)didBackBarItem:(UIBarButtonItem*)button{
     
     if ([self.webView canGoBack]) {
-        
         [self.webView goBack];
     }
 }
@@ -144,20 +112,32 @@
         
         _webView.backgroundColor = [UIColor whiteColor];
         
-       // _webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
+        // _webView.dataDetectorTypes = UIDataDetectorTypePhoneNumber;//自动检测网页上的电话号码，单击可以拨打
         
         [_webView.scrollView setShowsVerticalScrollIndicator:NO];//隐藏垂直滚动条
         
-        [_webView didNotLeftOrRightScrollForWebView];
+        // [_webView didNotLeftOrRightScrollForWebView];
         
-        [_webView clearBackColorForWebView];
+        // [_webView clearBackColorForWebView];
         
         //_webView.enablePanGesture = YES; //DLPanableWebView
         
         //滑动返回看这里
         _webView.allowsBackForwardNavigationGestures = YES;
+        
+        [_webView loadRequest:URLREQUEST(HOST)];
+        
+        [self.bridgeController registerHandler:self.bridge viewController:self];
+
     }
     return _webView;
+}
+
+-(BridgeController *)bridgeController{
+    if (_bridgeController == nil) {
+        _bridgeController = [[BridgeController alloc] init];
+    }
+    return _bridgeController;
 }
 
 -(WKWebViewJavascriptBridge *)bridge{

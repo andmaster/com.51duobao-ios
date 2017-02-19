@@ -135,7 +135,7 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (webView != _webView) { return; }
     
-    if (webView.scrollView.mj_header != nil) { [webView.scrollView.mj_header endRefreshing]; }
+//    if (webView.scrollView.mj_header != nil) { [webView.scrollView.mj_header endRefreshing]; }
     
     __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
     if (strongDelegate && [strongDelegate respondsToSelector:@selector(webViewDidFinishLoad:)]) {
@@ -146,7 +146,7 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     if (webView != _webView) { return; }
     
-    if (webView.scrollView.mj_header!= nil) { [webView.scrollView.mj_header endRefreshing]; }
+//    if (webView.scrollView.mj_header!= nil) { [webView.scrollView.mj_header endRefreshing]; }
     
     __strong WVJB_WEBVIEW_DELEGATE_TYPE* strongDelegate = _webViewDelegate;
     if (strongDelegate && [strongDelegate respondsToSelector:@selector(webView:didFailLoadWithError:)]) {

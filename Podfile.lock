@@ -14,38 +14,22 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - DLPanableWebView (0.9.1)
   - GDataXML-HTML (1.3.0)
   - IQKeyboardManager (4.0.5)
-  - MJRefresh (3.1.12)
-  - NJKWebViewProgress (0.2.3):
-    - NJKWebViewProgress/Core (= 0.2.3)
-    - NJKWebViewProgress/ProgressView (= 0.2.3)
-  - NJKWebViewProgress/Core (0.2.3)
-  - NJKWebViewProgress/ProgressView (0.2.3)
-  - SVProgressHUD (2.0.3)
   - WebViewJavascriptBridge (5.0.5)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
-  - DLPanableWebView (~> 0.9.1)
   - GDataXML-HTML (~> 1.3.0)
   - IQKeyboardManager (~> 4.0.5)
-  - MJRefresh (~> 3.1.12)
-  - NJKWebViewProgress (~> 0.2.3)
-  - SVProgressHUD (~> 2.0.3)
   - WebViewJavascriptBridge (~> 5.0.5)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  DLPanableWebView: 955fad0362f065729cd597e898ca5cb60c8e40cb
   GDataXML-HTML: 7adc03668cab35c288f1dbb8929a179f0fece898
   IQKeyboardManager: 50b62c0603308968256f8208886e206c1dcce607
-  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   WebViewJavascriptBridge: a4d502315f1b8d9a51cd6a9174147ed567ec3bc5
 
-PODFILE CHECKSUM: f87711ad6abb5e381bd98e7a2e8740983ac4cca5
+PODFILE CHECKSUM: 36ad00d7c6066f6072b89aa4b853cadc44c86dce
 
 COCOAPODS: 1.0.1
