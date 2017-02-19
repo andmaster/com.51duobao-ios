@@ -153,6 +153,9 @@
         [_webView clearBackColorForWebView];
         
         //_webView.enablePanGesture = YES; //DLPanableWebView
+        
+        //滑动返回看这里
+        _webView.allowsBackForwardNavigationGestures = YES;
     }
     return _webView;
 }
